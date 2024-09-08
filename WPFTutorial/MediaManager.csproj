@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cover.png" />
+    <None Remove="Lib\albumicon.png" />
+    <None Remove="Lib\cogwheel.png" />
+    <None Remove="Lib\loop.png" />
+    <None Remove="Lib\next.png" />
+    <None Remove="Lib\pause.png" />
+    <None Remove="Lib\play.png" />
+    <None Remove="Lib\prev.png" />
+    <None Remove="Lib\queue.png" />
+    <None Remove="Lib\settings.png" />
+    <None Remove="Lib\shuffle.png" />
+    <None Remove="Lib\shuffle.svg" />
+    <None Remove="Lib\volume.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DarkNet" Version="2.3.0" />
+    <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
+    <PackageReference Include="Inflatable.Lastfm" Version="1.2.0" />
+    <PackageReference Include="MicaWPF" Version="6.2.8" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="NAudio.Vorbis" Version="1.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Sungaila.ImmersiveDarkMode.Wpf" Version="1.0.0" />
+    <PackageReference Include="TagLibSharp" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cover.png" />
+    <Resource Include="Lib\albumicon.png" />
+    <Resource Include="Lib\cogwheel.png" />
+    <Resource Include="Lib\loop.png" />
+    <Resource Include="Lib\next.png" />
+    <Resource Include="Lib\pause.png" />
+    <Resource Include="Lib\play.png" />
+    <Resource Include="Lib\prev.png" />
+    <Resource Include="Lib\queue.png" />
+    <Resource Include="Lib\shuffle.png" />
+    <Resource Include="Lib\volume.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="media\library.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="media\settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IconExtractor\Properties\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="MediaManager.Widgets.SidePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MediaManager.Widgets"
+             xmlns:controls="clr-namespace:MicaWPF.Controls;assembly=MicaWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="150">
+
+    <Border Style="{StaticResource CardFrame}">
+        <Grid Name="InternalGrid" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <ToggleButton Margin="10" Height="30" Content="Home" Grid.Row="0" Name="homeBtn"/>
+            <ToggleButton Margin="10" Height="30" Content="Artists" Grid.Row="1" Name="artistBtn"/>
+            <ToggleButton Margin="10" Height="30" Content="Albums" Grid.Row="2" Name="albumBtn"/>
+            <ToggleButton Margin="10" Height="30" Content="Songs" Grid.Row="3" Name="songBtn"/>
+            <ToggleButton Margin="10" Height="30" Content="Year" Grid.Row="4" Name="yearBtn"/>
+            <ToggleButton Margin="10" Height="30" Content="Playlists" Grid.Row="5" Name="playlistBtn"/>
+        </Grid>
+    </Border>
+</UserControl>

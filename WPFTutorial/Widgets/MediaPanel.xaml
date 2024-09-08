@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="MediaManager.Widgets.MediaPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MediaManager.Widgets"
+             xmlns:controls="clr-namespace:MicaWPF.Controls;assembly=MicaWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="90" d:DesignWidth="1000">
+
+    <Border Style="{StaticResource CardFrame}">
+        <!-- Stylings -->
+
+        <!-- Main Containing Frame -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="2*" MinWidth="220"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Song Information Frame -->
+            <Grid Name="songInfoFrame" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--- Album Art Image -->
+                <Rectangle RadiusX="5" RadiusY="5">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="../Lib/albumicon.png" x:Name="albumArt"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <!-- Actual Song Metadata -->
+                <Grid Grid.Column="1" Name="albumMetadata" Margin="10,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" FontSize="17" Name="songTitle" VerticalAlignment="Center" FontWeight="SemiBold" Text="Main Song Title"/>
+                    <TextBlock Grid.Row="1" FontSize="14" Name="artistTitle" VerticalAlignment="Center" Text="Artist Name"/>
+                    <TextBlock Grid.Row="3" FontSize="14" Name="albumTitle" VerticalAlignment="Center" Text="Album Name"/>
+                </Grid>
+            </Grid>
+
+            <!-- Song Controls Frame -->
+            <Grid Name="songControlsFrame" Margin="10" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <!-- Top (Play/Pause and Control Buttons) -->
+                <Grid Name="songPlayButtons">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Height="32" Width="32">
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="5" RadiusY="5" Rect="0,0,32,32"/>
+                        </Border.Clip>
+                        <local:FlatToggleButton Style="{StaticResource ToggleFlatButton}" x:Name="shuffleButton" Click="shuffleButton_Click">
+                            <Image Source="../Lib/shuffle.png"/>
+                        </local:FlatToggleButton>
+                    </Border>
+                    <Border Height="32" Width="32" Grid.Column="1">
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="5" RadiusY="5" Rect="0,0,32,32"/>
+                        </Border.Clip>
+                        <Button Style="{StaticResource FlatButton}" Name="prevButton" Click="prevButton_Click">
+                            <Image Source="../Lib/prev.png"/>
+                        </Button>
+                    </Border>
+                    <Border Height="32" Width="32" Grid.Column="2">
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="5" RadiusY="5" Rect="0,0,32,32"/>
+                        </Border.Clip>
+                        <Button Style="{StaticResource FlatButton}" Name="playButton" Click="playButton_Click">
+                            <Image Source="../Lib/play.png" Name="playButtonImage"/>
+                        </Button>
+                    </Border>
+                    <Border Height="32" Width="32" Grid.Column="3">
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="5" RadiusY="5" Rect="0,0,32,32"/>
+                        </Border.Clip>
+                        <Button Style="{StaticResource FlatButton}" Name="nextButton" Click="nextButton_Click">
+                            <Image Source="../Lib/next.png"/>
+                        </Button>
+                    </Border>
+                    <Border Height="32" Width="32" Grid.Column="4">
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="5" RadiusY="5" Rect="0,0,32,32"/>
+                        </Border.Clip>
+                        <local:FlatToggleButton Style="{StaticResource ToggleFlatButton}" x:Name="loopButton" Click="loopButton_Click">
+                            <Image Source="../Lib/loop.png"/>
+                        </local:FlatToggleButton>
+                    </Border>
+                </Grid>
+
+                <!-- Bottom (Slider and Time Info) -->
+                <Grid Name="songTimeInfo" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="0:00" VerticalAlignment="Center" Margin="10" Name="leftTimeText"/>
+                    <Slider Grid.Column="1" Minimum="0" Maximum="5" Name="timeSlider" ValueChanged="timeSlider_ValueChanged" Thumb.DragCompleted="timeSlider_DragCompleted" Thumb.DragStarted="timeSlider_DragStarted"/>
+                    <TextBlock Grid.Column="2" Text="9:99" VerticalAlignment="Center" Margin="10" Name="rightTimeText"/>
+                </Grid>
+            </Grid>
+
+            <!-- Extra Controls Frame -->
+            <Grid Name="extraControlsFrame" Margin="10" Grid.Column="2" MinWidth="200">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Height="35" Width="35" Margin="15" Grid.Column="1"  Name="queueButton" Click="queueButton_Click">
+                    <Image Source="../Lib/queue.png" Margin="4"/>
+                </Button>
+                <Button Height="35" Width="35" Margin="15" Grid.Column="2" Name="volumeButton" Click="volumeButton_Click">
+                    <Image Source="../Lib/volume.png" Margin="3"/>
+                </Button>
+                <Button Height="35" Width="35" Margin="15" Grid.Column="3" Name="settingsButton" Click="settingsButton_Click">
+                    <Image Source="../Lib/cogwheel.png" Margin="3"/>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

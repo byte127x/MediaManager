@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="MediaManager.Widgets.MainPages.HomePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MediaManager.Widgets.MainPages"
+             xmlns:wgts="clr-namespace:MediaManager.Widgets"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1000">
+    <UserControl.Resources>
+    </UserControl.Resources>
+
+    <Border>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" Margin="10">
+            <Grid Margin="10,10,0,10" Name="InternalGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="250"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Recently Added:" FontSize="32"/>
+                <Separator Grid.Row="1" Background="#24ffffff" Margin="0,5"/>
+                <ScrollViewer Grid.Row="2" ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="260" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <Grid Name="RecentlyAddedGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <wgts:AddFolderButton x:Name="AddFolderButton"/>
+                        <wgts:AddFolderButton x:Name="AddFileButton" Grid.Column="1"/>
+                    </Grid>
+                </ScrollViewer>
+
+                <TextBlock Grid.Row="4" Text="Playlists:" FontSize="32"/>
+                <Separator Grid.Row="5" Background="#24ffffff" Margin="0,5"/>
+            </Grid>
+        </ScrollViewer>
+    </Border>
+</UserControl>

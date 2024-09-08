@@ -1,0 +1,27 @@
+﻿<Window x:Class="MediaManager.Dialogs.SongContextMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MediaManager.Dialogs"
+        mc:Ignorable="d"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Title="SongContextMenu" Height="160" Width="120" ResizeMode="NoResize" WindowStyle="None">
+
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ListView Style="{StaticResource ContextMenuList}" Grid.RowSpan="3" Name="MenuListView">
+            <ListViewItem Content="Add Next"/>
+            <ListViewItem Content="Add To End"/>
+            <ListViewItem Content="Play Single Song" Margin="0,0,0,15"/>
+            <ListViewItem Content="Edit Metadata"/>
+            <ListViewItem Content="Delete Song"/>
+        </ListView>
+        <Separator Grid.Row="1" VerticalAlignment="Top" Margin="10"/>
+    </Grid>
+</Window>

@@ -23,13 +23,15 @@ namespace MediaManager.Widgets
     /// </summary>
     public partial class DynamicAlbumContainer : UserControl
     {
-        List<AlbumCard> albumCards;
+        List<FrameworkElement> albumCards;
         int MinWidth;
         int MaxWidth;
         TextBlock? block;
+        public string nullText;
         public DynamicAlbumContainer()
         {
             InitializeComponent();
+            nullText = "No Albums ...";
             MinWidth = 200;
             MaxWidth = 300;
 
@@ -38,16 +40,29 @@ namespace MediaManager.Widgets
         }
         public void RefreshAlbumCards()
         {
-            albumCards = this.InternalGrid.Children.OfType<AlbumCard>().ToList();
+            albumCards = new List<FrameworkElement>();
+            foreach (AddFolderButton card in this.InternalGrid.Children.OfType<AddFolderButton>())
+            {
+                albumCards.Add(card);
+            }
+            foreach (AlbumCard card in this.InternalGrid.Children.OfType<AlbumCard>())
+            {
+                albumCards.Add(card);
+            }
 
             if (albumCards.Count < 1)
             {
+                if (block != null) { this.InternalGrid.Children.Remove(block); }
                 block = new TextBlock();
-                block.Text = "No Albums ...";
+                block.Text = nullText;
                 block.Margin = new Thickness(15);
                 block.FontSize = 32;
                 this.InternalGrid.Children.Add(block);
                 return;
+            } else
+            {
+                this.InternalGrid.Children.Remove(block);
+                block = null;
             }
             //SizeChangedEventArgs s = new SizeChangedEventArgs();
             //s.NewSize.Width = this.Width;
@@ -120,7 +135,7 @@ namespace MediaManager.Widgets
             InternalGrid.RowDefinitions.Add(rowD);
 
             var extraHeight = (int)(38 + 20);
-            foreach (AlbumCard card in albumCards)
+            foreach (FrameworkElement card in albumCards)
             {
                 idx++;
                 if (row == 0)

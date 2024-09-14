@@ -30,7 +30,7 @@ namespace MediaManager.Widgets
 
         private Pen mainPen = new Pen(Brushes.Red, 10.0);
         
-        public IEnumerable<FormattedText> texts = [];
+        public IEnumerable<FormattedText> texts = new List<FormattedText>();
         double dip;
         protected override void OnRender(DrawingContext drawingContext)
         {
@@ -54,7 +54,7 @@ namespace MediaManager.Widgets
         }
         public void clearData()
         {
-            texts = [];
+            texts = new List<FormattedText>();
         }
         public void addData(string data)
         {

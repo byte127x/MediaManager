@@ -43,6 +43,9 @@
     <Compile Update="Widgets\MainPages\HomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Widgets\MainPages\SearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Widgets\MainPages\SongsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -53,6 +56,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Widgets\SidePanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Widgets\SingleLineInput.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Widgets\SongsPageColumnView.xaml.cs">
@@ -87,6 +93,9 @@
     <Page Update="Widgets\FlatToggleButton.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Widgets\MainPages\PlaylistPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Widgets\MainPages\AlbumPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -99,6 +108,9 @@
     <Page Update="Widgets\MainPages\HomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Widgets\MainPages\SearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Widgets\MainPages\SongsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -109,6 +121,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Widgets\SidePanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Widgets\SingleLineInput.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Widgets\SongsPageColumnView.xaml">

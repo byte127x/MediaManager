@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {
+    "net6.0-windows7.0": {
       "DarkNet/2.3.0": {
         "type": "package",
         "compile": {
@@ -56,10 +56,10 @@
           "MicaWPFRuntimeComponent": "1.1.9"
         },
         "compile": {
-          "lib/net8.0-windows7.0/MicaWPF.dll": {}
+          "lib/net6.0-windows7.0/MicaWPF.dll": {}
         },
         "runtime": {
-          "lib/net8.0-windows7.0/MicaWPF.dll": {}
+          "lib/net6.0-windows7.0/MicaWPF.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
@@ -68,10 +68,10 @@
       "MicaWPF.Core/6.2.8": {
         "type": "package",
         "compile": {
-          "lib/net8.0-windows7.0/MicaWPF.Core.dll": {}
+          "lib/net6.0-windows7.0/MicaWPF.Core.dll": {}
         },
         "runtime": {
-          "lib/net8.0-windows7.0/MicaWPF.Core.dll": {}
+          "lib/net6.0-windows7.0/MicaWPF.Core.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
@@ -80,10 +80,10 @@
       "MicaWPFRuntimeComponent/1.1.9": {
         "type": "package",
         "compile": {
-          "lib/net8.0/MicaWPF.Projection.dll": {}
+          "lib/net6.0/MicaWPF.Projection.dll": {}
         },
         "runtime": {
-          "lib/net8.0/MicaWPF.Projection.dll": {}
+          "lib/net6.0/MicaWPF.Projection.dll": {}
         },
         "runtimeTargets": {
           "runtimes/win/native/MicaWPFRuntimeComponent.dll": {
@@ -541,12 +541,12 @@
           "Microsoft.Win32.Registry": "5.0.0"
         },
         "compile": {
-          "lib/net8.0-windows7.0/Sungaila.ImmersiveDarkMode.dll": {
+          "lib/net6.0-windows7.0/Sungaila.ImmersiveDarkMode.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0-windows7.0/Sungaila.ImmersiveDarkMode.dll": {
+          "lib/net6.0-windows7.0/Sungaila.ImmersiveDarkMode.dll": {
             "related": ".xml"
           }
         }
@@ -557,12 +557,12 @@
           "Sungaila.ImmersiveDarkMode": "1.0.0"
         },
         "compile": {
-          "lib/net8.0-windows7.0/Sungaila.ImmersiveDarkMode.Wpf.dll": {
+          "lib/net6.0-windows7.0/Sungaila.ImmersiveDarkMode.Wpf.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0-windows7.0/Sungaila.ImmersiveDarkMode.Wpf.dll": {
+          "lib/net6.0-windows7.0/Sungaila.ImmersiveDarkMode.Wpf.dll": {
             "related": ".xml"
           }
         },
@@ -5453,7 +5453,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": [
+    "net6.0-windows7.0": [
       "DarkNet >= 2.3.0",
       "DiscordRichPresence >= 1.2.1.24",
       "Inflatable.Lastfm >= 1.2.0",
@@ -5482,15 +5482,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0-windows"
+        "net6.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -5506,8 +5506,8 @@
       }
     },
     "frameworks": {
-      "net8.0-windows7.0": {
-        "targetAlias": "net8.0-windows",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows7.0",
         "dependencies": {
           "DarkNet": {
             "target": "Package",
@@ -5557,6 +5557,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.32, 6.0.32]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.32, 6.0.32]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.32, 6.0.32]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.32, 6.0.32]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -5565,7 +5583,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }

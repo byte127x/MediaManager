@@ -27,6 +27,8 @@ namespace MediaManager.Widgets
         Storyboard albumPressedStoryboard;
         public int albumId;
         public bool haventMovedOut = false;
+
+        public Func<AlbumCard, int> ExtraMouseUp;
         public AlbumCard()
         {
             InitializeComponent();
@@ -82,8 +84,11 @@ namespace MediaManager.Widgets
         public void onMouseUp(object sender, MouseEventArgs e)
         {
             //isDown = false;
+            AlbumCard card = (AlbumCard)sender;
             albumPressedStoryboard.Stop(((AlbumCard)sender).MainBorder);
             albumHoverStoryboard.Begin(((AlbumCard)sender).MainBorder);
+
+            if (card.haventMovedOut) { ExtraMouseUp(card); }
         }
     }
 }

@@ -31,7 +31,9 @@ namespace MediaManager.Widgets
         Storyboard albumUnhoverStoryboard;
         Storyboard albumPressedStoryboard;
         public int albumId;
+        public bool haventMovedOut = false;
 
+        public Func<object, int> ExtraMouseUp;
         IconExtractor IconEx = new IconExtractor("imageres.dll");
         public AddFolderButton()
         {
@@ -66,17 +68,22 @@ namespace MediaManager.Widgets
         }
         public void onUnhover(object sender, RoutedEventArgs e)
         {
+            haventMovedOut = false;
             albumUnhoverStoryboard.Begin(((AddFolderButton)sender).MainBorder);
             albumHoverStoryboard.Stop(((AddFolderButton)sender).MainBorder);
         }
         public void onMouseDown(object sender, MouseEventArgs e)
         {
+            haventMovedOut = true;
             albumPressedStoryboard.Begin(((AddFolderButton)sender).MainBorder);
         }
         public void onMouseUp(object sender, MouseEventArgs e)
         {
+            AddFolderButton card = (AddFolderButton)sender;
             albumPressedStoryboard.Stop(((AddFolderButton)sender).MainBorder);
             albumHoverStoryboard.Begin(((AddFolderButton)sender).MainBorder);
+
+            if (card.haventMovedOut) { ExtraMouseUp(card); }
         }
         // from stack overflow also
         Bitmap ExtractVistaIcon(Icon icoIcon)

@@ -3,40 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\widgets\\mainpages\\searchpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\widgets\\mainpages\\searchpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\widgets\\albumcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\widgets\\albumcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\widgets\\mainpages\\searchpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\widgets\\mainpages\\searchpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\widgets\\sidepanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\widgets\\sidepanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\widgets\\singlelineinput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\widgets\\singlelineinput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\bin\\Debug\\net6.0-windows7.0\\media\\library.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WPFTutorial\\bin\\Debug\\net6.0-windows7.0\\media\\library.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\widgets\\mainpages\\artistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\widgets\\mainpages\\artistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\widgets\\mediapanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\widgets\\mediapanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\media\\library.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\media\\library.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\widgets\\mediapanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\widgets\\mediapanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\dialogs\\songcontextmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\dialogs\\songcontextmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\dialogs\\songcontextmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\dialogs\\songcontextmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\media\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\media\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|c:\\users\\ionsz\\source\\repos\\wpftutorial\\wpftutorial\\mediamanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{6794E7C5-C038-40BE-B1F8-1577D44D9E7E}|WPFTutorial\\MediaManager.csproj|solutionrelative:wpftutorial\\mediamanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,114 +58,131 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SongContextMenu.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Dialogs\\SongContextMenu.xaml.cs",
-              "RelativeDocumentMoniker": "WPFTutorial\\Dialogs\\SongContextMenu.xaml.cs",
-              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Dialogs\\SongContextMenu.xaml.cs",
-              "RelativeToolTip": "WPFTutorial\\Dialogs\\SongContextMenu.xaml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAuwDYAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T19:54:36.726Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "ArtistPage.xaml",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MainPages\\ArtistPage.xaml",
+              "RelativeDocumentMoniker": "WPFTutorial\\Widgets\\MainPages\\ArtistPage.xaml",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MainPages\\ArtistPage.xaml",
+              "RelativeToolTip": "WPFTutorial\\Widgets\\MainPages\\ArtistPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-14T21:48:42.059Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\App.xaml",
-              "RelativeDocumentMoniker": "WPFTutorial\\App.xaml",
-              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\App.xaml",
-              "RelativeToolTip": "WPFTutorial\\App.xaml",
+              "Title": "SidePanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\SidePanel.xaml.cs",
+              "RelativeDocumentMoniker": "WPFTutorial\\Widgets\\SidePanel.xaml.cs",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\SidePanel.xaml.cs",
+              "RelativeToolTip": "WPFTutorial\\Widgets\\SidePanel.xaml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAIwCsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T21:34:39.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SingleLineInput.xaml",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\SingleLineInput.xaml",
+              "RelativeDocumentMoniker": "WPFTutorial\\Widgets\\SingleLineInput.xaml",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\SingleLineInput.xaml",
+              "RelativeToolTip": "WPFTutorial\\Widgets\\SingleLineInput.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-01T20:14:38.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\App.xaml.cs",
-              "RelativeDocumentMoniker": "WPFTutorial\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\App.xaml.cs",
-              "RelativeToolTip": "WPFTutorial\\App.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAqwBoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T20:23:50.842Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MediaPanel.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MediaPanel.xaml.cs",
-              "RelativeDocumentMoniker": "WPFTutorial\\Widgets\\MediaPanel.xaml.cs",
-              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MediaPanel.xaml.cs",
-              "RelativeToolTip": "WPFTutorial\\Widgets\\MediaPanel.xaml.cs",
-              "ViewState": "AQIAAK8AAAAAAAAAAAA7wMkAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T20:15:11.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T19:51:47.599Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MediaPanel.xaml",
-              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MediaPanel.xaml",
-              "RelativeDocumentMoniker": "WPFTutorial\\Widgets\\MediaPanel.xaml",
-              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MediaPanel.xaml",
-              "RelativeToolTip": "WPFTutorial\\Widgets\\MediaPanel.xaml",
+              "Title": "SearchPage.xaml",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MainPages\\SearchPage.xaml",
+              "RelativeDocumentMoniker": "WPFTutorial\\Widgets\\MainPages\\SearchPage.xaml",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MainPages\\SearchPage.xaml",
+              "RelativeToolTip": "WPFTutorial\\Widgets\\MainPages\\SearchPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-31T20:12:41.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T19:51:22.949Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AlbumCard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\AlbumCard.xaml.cs",
+              "RelativeDocumentMoniker": "WPFTutorial\\Widgets\\AlbumCard.xaml.cs",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\AlbumCard.xaml.cs",
+              "RelativeToolTip": "WPFTutorial\\Widgets\\AlbumCard.xaml.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAA3wD8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T21:13:00.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "library.json",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\bin\\Debug\\net6.0-windows7.0\\media\\library.json",
+              "RelativeDocumentMoniker": "WPFTutorial\\bin\\Debug\\net6.0-windows7.0\\media\\library.json",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\bin\\Debug\\net6.0-windows7.0\\media\\library.json",
+              "RelativeToolTip": "WPFTutorial\\bin\\Debug\\net6.0-windows7.0\\media\\library.json",
+              "ViewState": "AQIAAAtYAAAAAAAAAAAWwCBYAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-14T21:20:48.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SearchPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MainPages\\SearchPage.xaml.cs",
+              "RelativeDocumentMoniker": "WPFTutorial\\Widgets\\MainPages\\SearchPage.xaml.cs",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Widgets\\MainPages\\SearchPage.xaml.cs",
+              "RelativeToolTip": "WPFTutorial\\Widgets\\MainPages\\SearchPage.xaml.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAUwFMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T19:51:22.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFTutorial\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WPFTutorial\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAKQDAAAAAAAAAADwv5QEAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T03:01:35.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\MainWindow.xaml",
               "RelativeDocumentMoniker": "WPFTutorial\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\MainWindow.xaml",
               "RelativeToolTip": "WPFTutorial\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-10T21:08:22.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T21:33:01.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WPFTutorial\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\MainWindow.xaml.cs",
-              "RelativeToolTip": "WPFTutorial\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAgwHUAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T03:48:50.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SongContextMenu.xaml",
-              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Dialogs\\SongContextMenu.xaml",
-              "RelativeDocumentMoniker": "WPFTutorial\\Dialogs\\SongContextMenu.xaml",
-              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\Dialogs\\SongContextMenu.xaml",
-              "RelativeToolTip": "WPFTutorial\\Dialogs\\SongContextMenu.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-25T20:16:49.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "settings.json",
-              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\media\\settings.json",
-              "RelativeDocumentMoniker": "WPFTutorial\\media\\settings.json",
-              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\media\\settings.json",
-              "RelativeToolTip": "WPFTutorial\\media\\settings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAOAAAA",
+              "DocumentIndex": 9,
+              "Title": "library.json",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\media\\library.json",
+              "RelativeDocumentMoniker": "WPFTutorial\\media\\library.json",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\media\\library.json",
+              "RelativeToolTip": "WPFTutorial\\media\\library.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-31T19:07:48.917Z"
+              "WhenOpened": "2024-09-14T03:17:02.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MediaManager",
+              "DocumentMoniker": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\MediaManager.csproj",
+              "RelativeDocumentMoniker": "WPFTutorial\\MediaManager.csproj",
+              "ToolTip": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\MediaManager.csproj",
+              "RelativeToolTip": "WPFTutorial\\MediaManager.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-14T03:01:05.936Z"
             }
           ]
         }

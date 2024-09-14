@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="cover.png" />
     <None Remove="Lib\albumicon.png" />
+    <None Remove="Lib\artisticon.png" />
     <None Remove="Lib\cogwheel.png" />
     <None Remove="Lib\loop.png" />
     <None Remove="Lib\next.png" />
@@ -18,6 +19,7 @@
     <None Remove="Lib\play.png" />
     <None Remove="Lib\prev.png" />
     <None Remove="Lib\queue.png" />
+    <None Remove="Lib\search.png" />
     <None Remove="Lib\settings.png" />
     <None Remove="Lib\shuffle.png" />
     <None Remove="Lib\shuffle.svg" />
@@ -39,6 +41,7 @@
   <ItemGroup>
     <Resource Include="cover.png" />
     <Resource Include="Lib\albumicon.png" />
+    <Resource Include="Lib\artisticon.png" />
     <Resource Include="Lib\cogwheel.png" />
     <Resource Include="Lib\loop.png" />
     <Resource Include="Lib\next.png" />
@@ -46,6 +49,7 @@
     <Resource Include="Lib\play.png" />
     <Resource Include="Lib\prev.png" />
     <Resource Include="Lib\queue.png" />
+    <Resource Include="Lib\search.png" />
     <Resource Include="Lib\shuffle.png" />
     <Resource Include="Lib\volume.png" />
   </ItemGroup>
@@ -61,6 +65,18 @@
 
   <ItemGroup>
     <Folder Include="IconExtractor\Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Widgets\MainPages\PlaylistPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Widgets\MainPages\PlaylistPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>

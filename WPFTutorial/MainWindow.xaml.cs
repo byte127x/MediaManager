@@ -35,6 +35,8 @@ using System.Drawing;
 using System.Windows.Shapes;
 using DiscordRPC.Logging;
 using DiscordRPC;
+using NAudio.Midi;
+using FolderBrowserDialog = System.Windows.Forms.FolderBrowserDialog;
 
 namespace MediaManager
 {
@@ -80,7 +82,7 @@ namespace MediaManager
         //LastfmClient fmclient = new LastfmClient("d252e044140298ad60e0ac1ab2b87f3f", "7e9fae2669536dff6deadcf618fce65a");
         public AudioHandler()
         {
-            Queue = [];
+            Queue = new List<int>();
             Index = 0;
             Playing = false;
             string audioLibrarySrc = System.IO.File.ReadAllText(@"media\library.json");
@@ -313,8 +315,8 @@ namespace MediaManager
                 Grid iteminternals = new Grid();
                 iteminternals.Margin = new Thickness(0, 1, 0, 1);
 
-                GridLength[] rowdefs = [new GridLength(25), new GridLength(25)];
-                GridLength[] coldefs = [new GridLength(50), new GridLength(3), new GridLength(1, GridUnitType.Star)];
+                GridLength[] rowdefs = new GridLength[] { new GridLength(25), new GridLength(25) };
+                GridLength[] coldefs = new GridLength[] { new GridLength(50), new GridLength(3), new GridLength(1, GridUnitType.Star) };
                 foreach (GridLength g in rowdefs) { RowDefinition r = new RowDefinition(); r.Height = g; iteminternals.RowDefinitions.Add(r); }
                 foreach (GridLength g in coldefs) { ColumnDefinition c = new ColumnDefinition(); c.Width = g; iteminternals.ColumnDefinitions.Add(c); }
 
@@ -609,7 +611,31 @@ namespace MediaManager
             IEnumerable<int> SortedAlbumSongIds = AlbumSongIds.OrderBy(x => TrackNums[AlbumSongIds.IndexOf(x)]).ToList();
             Queue = SortedAlbumSongIds.ToList();
             Index = Queue.IndexOf(songid);
-            
+
+            if (isShuffled) { ShuffleFullQueue(); }
+
+            PlayAudio();
+            return 0;
+        }
+        public int PlayPlaylist(int songid, int albumid)
+        {
+            Stop();
+            if (audioFile != null)
+            {
+                audioFile.Dispose();
+                audioFile = null;
+            }
+
+            List<int> AlbumSongIds = new List<int>();
+            List<int> TrackNums = new List<int>();
+            foreach (UInt32 listsongid in (JArray)audioLibrary["playlists"][albumid]["tracklist"])
+            {
+
+                AlbumSongIds.Add((int)listsongid);
+            }
+            Queue = AlbumSongIds.ToList();
+            Index = Queue.IndexOf(songid);
+
             if (isShuffled) { ShuffleFullQueue(); }
 
             PlayAudio();
@@ -633,6 +659,8 @@ namespace MediaManager
         public ArtistPage artistPage = new ArtistPage();
         public SongsPage songPage = new SongsPage();
         public YearsPage yearPage = new YearsPage();
+        public PlaylistPage playlistPage = new PlaylistPage();
+        public SearchPage searchPage = new SearchPage();
         public FrameworkElement? currentTab;
         public bool queueShowing = true;
         public List<Window> Dialogs = new List<Window>();
@@ -755,8 +783,8 @@ namespace MediaManager
             homePage.AddFileButton.setIcon(27);
             homePage.AddFileButton.albumText.Text = "Add File +";
 
-            homePage.AddFolderButton.MouseUp += AddFolder;
-            homePage.AddFileButton.MouseUp += AddFile;
+            homePage.AddFolderButton.ExtraMouseUp += AddFolder;
+            homePage.AddFileButton.ExtraMouseUp += AddFile;
 
             songPage.columnedView.songPlaybackFunction = audioHandler.PlayAllSongs;
 
@@ -805,7 +833,7 @@ namespace MediaManager
             queueShowing = !queueShowing;
         }
 
-        public void AddFile(object sender, RoutedEventArgs e)
+        public int AddFile(object sender)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Supported Audio Files|*.mp3;*.m4a;*.wav;*.aac;*.wma;*.aif;*.aiff;*.ogg|MPEG-3 Audio|*.mp3|AAC/ALAC Audio|*.m4a;*.aac|WAV Audio|*.wav|OGG Vorbis Audio|*.ogg|Windows Media Audio|*.wma|AIFF Audio|*.aif;*.aiff|All files (*.*)|*.*";
@@ -832,21 +860,23 @@ namespace MediaManager
 
             ClearUI();
             CreateUI();
+            return 0;
         }
-        public void AddFolder(object sender, EventArgs e)
+        public int AddFolder(object sender)
         {
             // Get dialog to select folder
-            OpenFolderDialog dialog = new OpenFolderDialog();
-            dialog.Multiselect = false;
-            dialog.ShowDialog(this);
-            if (dialog.FolderName == "") { return; }
+            //OpenFolderDialog dialog = new OpenFolderDialog();
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            //dialog.Multiselect = false;
+            dialog.ShowDialog();
+            if (dialog.SelectedPath == "") { return 1; }
 
             FileProgressbarDialog prog = new FileProgressbarDialog();
             prog.ShowInTaskbar = false;
             prog.Topmost = true;
             prog.Show();
 
-            string[] filepaths = Directory.GetFiles(dialog.FolderName, "*.*", SearchOption.AllDirectories);
+            string[] filepaths = Directory.GetFiles(dialog.SelectedPath, "*.*", SearchOption.AllDirectories);
             IEnumerable<string> audioFilepaths = filepaths.Where(s => audiofiletypes.Contains(System.IO.Path.GetExtension(s).ToLower())); // Ensure only audio files are selected
 
             foreach (string file in audioFilepaths)
@@ -863,6 +893,12 @@ namespace MediaManager
 
             ClearUI();
             CreateUI();
+            return 0;
+        }
+        public int AddPlaylist(object sender)
+        {
+            MessageBox.Show("New Playlist ...");
+            return 0;
         }
         void AllowUIToUpdate()
         {
@@ -905,15 +941,23 @@ namespace MediaManager
         }
         public void CreateUI()
         {
+            searchPage.AlbumsToSearch = new List<SearchableField>();
+            searchPage.ArtistsToSearch = new List<SearchableField>();
+            searchPage.SongsToSearch = new List<SearchableField>();
+            searchPage.PlaylistsToSearch = new List<SearchableField>();
+
             // Load Artists in Artist Tab
             ListView artistView = artistPage.ArtistView.InnerView;
 
+            int artistid = 0;
             foreach (string artist in audioHandler.artistList)
             {
                 ListViewItem item = new ListViewItem();
                 item.Content = artist;
                 item.FontSize = 13;
                 artistView.Items.Add(item);
+                searchPage.ArtistsToSearch.Add(new SearchableField(artist, artistid));
+                artistid++;
             }
             artistPage.ArtistView.selChangedFunc = changeArtistView;
 
@@ -931,7 +975,7 @@ namespace MediaManager
                 jsonAlbums[id]["id"] = id;
                 AlbumCard card = new AlbumCard();
                 card.albumId = id;
-                card.MouseUp += albumCardClicked;
+                card.ExtraMouseUp = albumCardClicked;
 
                 string? cover = (string)album["cover"];
                 if ((cover != null) && (!System.IO.File.Exists(cover))) {
@@ -946,6 +990,14 @@ namespace MediaManager
                 if (!yearInYearpage)
                 {
                     years.Add((int)(album["year"]));
+                }
+
+                try
+                {
+                    searchPage.AlbumsToSearch.Add(new SearchableField((string)album["name"], id));
+                } catch (System.ArgumentException e)
+                {
+                    continue;
                 }
             }
             albumPage.AlbumContainer.RefreshAlbumCards();
@@ -963,7 +1015,7 @@ namespace MediaManager
                 AlbumCard recentCard = new AlbumCard();
                 recentCard.albumId = idx;
                 recentCard.setCardInfo((string)album["name"], (string)album["artist"], (string)album["cover"]);
-                recentCard.MouseUp += albumCardClicked;
+                recentCard.ExtraMouseUp = albumCardClicked;
 
                 recentCard.SetValue(Grid.ColumnProperty, homePage.RecentlyAddedGrid.ColumnDefinitions.Count - 1);
 
@@ -986,11 +1038,44 @@ namespace MediaManager
             yearPage.YearView.selChangedFunc += changeYearsView;
 
             // Load Songs in Songs Tab
+            int songid = 0;
             foreach (JToken song in audioHandler.audioLibrary["songs"])
             {
                 JToken album = audioHandler.audioLibrary["albums"][(Int32)(song["album"])];
                 songPage.columnedView.AddItem(new string[] { (string)(song["title"]), (string)(song["artist"]), (string)(album["name"]), (string)(album["genre"]), (string)(album["year"]) });
+
+                searchPage.SongsToSearch.Add(new SearchableField(song["title"].ToString(), songid));
+
+                songid++;
             }
+
+            // Load Playlists in Playlist Tab
+            playlistPage.AddPlaylistBtn.ExtraMouseUp = AddPlaylist;
+            playlistPage.InternalGrid.Children.Remove(playlistPage.AddPlaylistBtn);
+            playlistPage.AlbumContainer.InternalGrid.Children.Add(playlistPage.AddPlaylistBtn);
+            int playlistid = 0;
+            foreach (JToken playlist in audioHandler.audioLibrary["playlists"])
+            {
+                AlbumCard card = new AlbumCard();
+                card.albumId = playlistid;
+                card.ExtraMouseUp = playlistCardClicked;
+
+                string? cover = (string)playlist["cover"];
+                if ((cover != null) && (!System.IO.File.Exists(cover)))
+                {
+                    cover = null;
+                    playlist["cover"] = null;
+                }
+                card.setCardInfo((string)playlist["title"], $"{(JToken)playlist["tracklist"].Count()} Songs", cover);
+                playlistPage.AlbumContainer.InternalGrid.Children.Add(card);
+
+                searchPage.PlaylistsToSearch.Add(new SearchableField((string)playlist["title"], playlistid));
+            }
+            playlistPage.AlbumContainer.RefreshAlbumCards();
+
+            // Load Searchable Items in Search Tab
+            //archPage.AlbumsToSearch = 
+            searchPage.mainWindow = this;
 
             sidePanelControl.returnFunction = changeFrame;
         }
@@ -1002,7 +1087,7 @@ namespace MediaManager
             {
                 AlbumCard card = new AlbumCard();
                 card.albumId = albumid;
-                card.MouseUp += albumCardClicked;
+                card.ExtraMouseUp = albumCardClicked;
 
                 JToken alb = audioHandler.audioLibrary["albums"][albumid];
                 card.setCardInfo((string)alb["name"], artistnew, (string?)alb["cover"]);
@@ -1022,7 +1107,7 @@ namespace MediaManager
                 {
                     AlbumCard card = new AlbumCard();
                     card.albumId = albumid;
-                    card.MouseUp += albumCardClicked;
+                    card.ExtraMouseUp = albumCardClicked;
 
                     card.setCardInfo((string)album["name"], (string)album["artist"], (string?)album["cover"]);
                     yearPage.AlbumContainer.InternalGrid.Children.Add(card);
@@ -1062,6 +1147,14 @@ namespace MediaManager
                 {
                     currentTab = yearPage;
                 }
+                else if (strframe == "playlistBtn")
+                {
+                    currentTab = playlistPage;
+                }
+                else if (strframe == "searchBtn")
+                {
+                    currentTab = searchPage;
+                }
             } else
             {
                 currentTab = (FrameworkElement)frame;
@@ -1070,10 +1163,23 @@ namespace MediaManager
             TabSwitcher.Children.Add(currentTab);
             return 0;
         }
-        public void albumCardClicked(object s, RoutedEventArgs e) {
-            AlbumCard card = (AlbumCard)s;
-            if (!card.haventMovedOut) { return; }
-            
+        public int artistCardClicked(AlbumCard card) {
+            //MessageBox.Show("lolcatz");
+            changeFrame("artistBtn");
+
+            sidePanelControl.activeButton.IsChecked = false;
+            sidePanelControl.artistBtn.IsChecked = true;
+            sidePanelControl.activeButton = sidePanelControl.artistBtn;
+            artistPage.ArtistView.InnerView.SelectedIndex = card.albumId;
+
+            //sidePanelControl.toggleButton_Toggle(sidePanelControl.activeButton);
+            //sidePanelControl.toggleButton_Toggle(sidePanelControl.artistBtn);
+            //sidePanelControl.toggleButton_ClickStart(sidePanelControl.artistBtn, null);
+            //sidePanelControl.toggleButton_ClickEnd(sidePanelControl.activeButton, null);
+
+            return 0;
+        }
+        public int albumCardClicked(AlbumCard card) {
             int id = card.albumId;
             JToken albumInfo = audioHandler.audioLibrary["albums"][id];
 
@@ -1107,6 +1213,46 @@ namespace MediaManager
             changeFrame(page);
 
             audioHandler.UpdateSongViewerGui();
+            return 0;
+        }
+        public int playlistCardClicked(AlbumCard card)
+        {
+            int id = card.albumId;
+            JToken playlistInfo = audioHandler.audioLibrary["playlists"][id];
+
+            AlbumViewingPage page = new AlbumViewingPage();
+            page.audioHandler = audioHandler;
+            page.backPlace = sidePanelControl.activeButton.Name;
+            page.backCommand = albumBack;
+
+            List<JArray> tracklist = new List<JArray>();
+            int tracknum = 0;
+            foreach (UInt32 track in (JArray)playlistInfo["tracklist"])
+            {
+                JArray addedTrack = new JArray();
+                addedTrack.Add(tracknum+1);
+                addedTrack.Add(track);
+
+                // Get Audio Length
+
+                AudioFileReader a = new AudioFileReader((string)audioHandler.audioLibrary["songs"][(Int32)(track)]["path"]);
+                //addedTrack.Add("7:77");
+                addedTrack.Add(a.TotalTime.TotalSeconds);
+
+                tracklist.Add(addedTrack);
+                tracknum++;
+            }
+
+            page.Tag = card.albumId;
+            page.UpdateInfo((string)playlistInfo["name"], $"{tracklist.Count()}", "", (string)playlistInfo["year"], (string)playlistInfo["cover"], tracklist);
+            page.ColumnedView.songPlaybackFunction = (int songid) => { return audioHandler.PlayPlaylist(songid, card.albumId); };
+
+            sidePanelControl.activeButton.IsChecked = false;
+            sidePanelControl.activeButton = null;
+            changeFrame(page);
+
+            audioHandler.UpdateSongViewerGui();
+            return 0;
         }
         public int albumBack(string whereto)
         {
@@ -1124,9 +1270,10 @@ namespace MediaManager
             {
                 return;
             }
-            int BeforeSelectedSongId = ((List<int>)QueueListView.Tag)[QueueListView.SelectedIndex-1];
+            int BeforeSelectedSongId = ((List<int>)QueueListView.Tag)[QueueListView.SelectedIndex];
             audioHandler.Index = audioHandler.Queue.IndexOf(BeforeSelectedSongId);
-            audioHandler.playNext();
+            audioHandler.Stop();
+            audioHandler.PlayAudio();
         }
     }
 }

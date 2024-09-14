@@ -18,6 +18,7 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
 
             <ToggleButton Margin="10" Height="30" Content="Home" Grid.Row="0" Name="homeBtn"/>
@@ -26,6 +27,7 @@
             <ToggleButton Margin="10" Height="30" Content="Songs" Grid.Row="3" Name="songBtn"/>
             <ToggleButton Margin="10" Height="30" Content="Year" Grid.Row="4" Name="yearBtn"/>
             <ToggleButton Margin="10" Height="30" Content="Playlists" Grid.Row="5" Name="playlistBtn"/>
+            <ToggleButton Margin="10" Height="30" Content="Search" Grid.Row="6" Name="searchBtn"/>
         </Grid>
     </Border>
 </UserControl>

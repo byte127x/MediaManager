@@ -11,8 +11,8 @@
     <Border CornerRadius="10" Name="MainBorder" Margin="5" Background="#00ffffff" BorderThickness="1" BorderBrush="Transparent">
         <Grid Margin="10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="160"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="72"/>
             </Grid.RowDefinitions>
 
             <Image Source="../Lib/albumicon.png" Name="MainIcon"/>

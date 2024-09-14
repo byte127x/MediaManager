@@ -65,7 +65,7 @@ namespace MediaManager.Widgets
             toggleStartHover.Stop((ToggleButton)sender);
             toggleStartClick.Begin((ToggleButton)sender);
         }
-        private void toggleButton_ClickEnd(object sender, RoutedEventArgs e) {
+        public void toggleButton_ClickEnd(object sender, RoutedEventArgs e) {
             toggleStartClick.Stop((ToggleButton)sender);
             toggleStartHover.Begin((ToggleButton)sender);
         }

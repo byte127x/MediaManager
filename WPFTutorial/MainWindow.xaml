@@ -50,7 +50,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <TextBlock Text="Volume:" FontSize="14"/>
-                        <Slider Grid.Row="1"/>
+                        <Slider Grid.Row="1" Minimum="0" Maximum="1" Name="VolumeSlider" ValueChanged="VolumeChange"/>
                     </Grid>
                 </Grid>
             </Border>

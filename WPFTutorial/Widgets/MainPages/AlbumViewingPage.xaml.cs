@@ -48,7 +48,22 @@ namespace MediaManager.Widgets.MainPages
                 idx++;
             }
         }
-        public void UpdateInfo(string title, string artist, string genre, string year, string albumart, List<JArray> tracklist)
+        public void UpdateDescriptionWidth()
+        {
+            GenreYearText.Width = PlaylistDescriptionViewer.ActualWidth - SystemParameters.VerticalScrollBarWidth;
+
+        }
+        public void UpdatePlaylistInfo(string title, string date, string description, string albumart, List<JArray> tracklist)
+        {
+            // Make room for description
+            InfoHeader.RowDefinitions[3].Height = new GridLength(75);
+            GenreYearText.TextWrapping = TextWrapping.Wrap;
+            GenreYearText.Width = PlaylistDescriptionViewer.ActualWidth;
+
+            this.SizeChanged += (sender, args) => { UpdateDescriptionWidth(); };
+            UpdateInfo(title, date, description, "", albumart, tracklist);
+        }
+        public void UpdateInfo(string title, string artist, string? genre, string? year, string albumart, List<JArray> tracklist)
         {
             if (genre == null) { genre = "Unknown Genre"; }
             if (year == "0") { year = "Unknown Year"; }
@@ -59,6 +74,19 @@ namespace MediaManager.Widgets.MainPages
             ArtistText.Text = artist;
             GenreYearText.Text = $"{genre} • {year}";
             CountText.Text = $"{tracklist.Count} Songs";
+
+            if (genre == "")
+            {
+                GenreYearText.Text = $"{year}";
+            }
+            else if (year == "")
+            {
+                GenreYearText.Text = $"{genre}";
+            }
+            else
+            {
+                GenreYearText.Text = $"{genre} • {year}";
+            }
 
             Uri albumArtUri;
             if (albumart == null)

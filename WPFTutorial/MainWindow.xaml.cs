@@ -801,6 +801,10 @@ namespace MediaManager
             }
             SystemSounds.Asterisk.Play();
         }
+        public void VolumeChange(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            audioHandler.audioFile.Volume = (float)VolumeSlider.Value;
+        }
         public void ToggleVolume()
         {
             bool volumeShowing = (VolumeSection.Height.Value != 0);
@@ -811,6 +815,10 @@ namespace MediaManager
             } else
             {
                 VolumeSection.Height = new GridLength(60);
+                if (audioHandler.audioFile != null)
+                {
+                    VolumeSlider.Value = (double)audioHandler.audioFile.Volume;
+                }
                 if (!queueShowing) {
                     ToggleQueue();
                 }
@@ -1289,7 +1297,7 @@ namespace MediaManager
             }
 
             page.Tag = card.albumId;
-            page.UpdateInfo((string)playlistInfo["name"], $"{tracklist.Count()}", "", (string)playlistInfo["year"], (string)playlistInfo["cover"], tracklist);
+            page.UpdatePlaylistInfo((string)playlistInfo["title"], (string)playlistInfo["datecreated"], (string)playlistInfo["description"], (string)playlistInfo["cover"], tracklist);
             page.ColumnedView.songPlaybackFunction = (int songid) => { return audioHandler.PlayPlaylist(songid, card.albumId); };
 
             sidePanelControl.activeButton.IsChecked = false;

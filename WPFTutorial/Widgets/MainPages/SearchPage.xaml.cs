@@ -89,6 +89,10 @@ namespace MediaManager.Widgets.MainPages
                         card.ExtraMouseUp = mainWindow.songCardClicked;
                         card.setCardInfo((string)mainWindow.audioHandler.audioLibrary["songs"][field.fieldId]["title"], $"{field.score}Song • {(string)mainWindow.audioHandler.audioLibrary["songs"][field.fieldId]["artist"]}", (string?)mainWindow.audioHandler.audioLibrary["albums"][(Int32)mainWindow.audioHandler.audioLibrary["songs"][field.fieldId]["album"]]["cover"]);
                         break;
+                    case 3: // Playlist
+                        card.ExtraMouseUp = mainWindow.playlistCardClicked;
+                        card.setCardInfo((string)mainWindow.audioHandler.audioLibrary["playlists"][field.fieldId]["title"], $"Playlist • {((JArray)(mainWindow.audioHandler.audioLibrary["playlists"][field.fieldId]["tracklist"])).Count()} Songs", (string?)mainWindow.audioHandler.audioLibrary["playlists"][field.fieldId]["cover"]);
+                        break;
                     default:
                         break;
                 }

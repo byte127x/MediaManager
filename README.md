@@ -11,3 +11,4 @@ TODO:
 - Remove songs from queue
 - Reduce memory usage from many album art covers being shown
 - Handle errors in json formatting and faulty album cover extraction
+- Add plays counter

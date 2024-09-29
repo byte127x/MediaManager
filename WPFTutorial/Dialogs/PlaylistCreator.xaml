@@ -1,0 +1,82 @@
+﻿<Window x:Class="MediaManager.Dialogs.PlaylistCreator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wgts="clr-namespace:MediaManager.Widgets"
+        xmlns:local="clr-namespace:MediaManager.Dialogs"
+        mc:Ignorable="d"
+        Background="Transparent"
+        Title="Create Playlist" Height="450" Width="500">
+    <Grid Background="#88000000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Name="Header" Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Title:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <wgts:SingleLineInput Grid.Column="2" x:Name="TitleInput"/>
+            <TextBlock Text="Description:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2"/>
+            <wgts:SingleLineInput Grid.Column="2" Grid.Row="2" x:Name="DescInput"/>
+        </Grid>
+
+        <Grid Name="Toolbar" Grid.Row="1" Margin="15,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="35"/>
+                <ColumnDefinition Width="25"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Height="25" Width="25" Grid.Column="0">
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="5" RadiusY="5" Rect="0,0,25,25"/>
+                </Border.Clip>
+                <Button Style="{StaticResource FlatButton}" Name="addButton" Click="addButton_Click">
+                    <Image Source="../Lib/add.png"/>
+                </Button>
+            </Border>
+            
+            <Border Height="25" Width="25" Grid.Column="2">
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="5" RadiusY="5" Rect="0,0,25,25"/>
+                </Border.Clip>
+                <Button Style="{StaticResource FlatButton}" Name="upButton" Click="upButton_Click">
+                    <Image Source="../Lib/up.png"/>
+                </Button>
+            </Border>
+            <Border Height="25" Width="25" Grid.Column="3">
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="5" RadiusY="5" Rect="0,0,25,25"/>
+                </Border.Clip>
+                <Button Style="{StaticResource FlatButton}" Name="downButton" Click="downButton_Click">
+                    <Image Source="../Lib/down.png"/>
+                </Button>
+            </Border>
+        </Grid>
+        <wgts:CustomListView Grid.Row="2" Margin="15,0,15,15" x:Name="PlaylistBody"/>
+
+        <Grid Name="ExtraOptions" Grid.Row="3" Margin="15,0,15,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="65"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Cancel" Width="60" HorizontalAlignment="Right" Click="Cancel_Click"/>
+            <Button Content="OK" Width="50" HorizontalAlignment="Right" Grid.Column="1" Click="OK_Click"/>
+        </Grid>
+    </Grid>
+</Window>

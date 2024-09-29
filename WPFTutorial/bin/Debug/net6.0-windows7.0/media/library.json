@@ -22864,7 +22864,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2024,
-      "cover": "media\\0b89ff86-2380-476e-9e9c-b68f528c7cba.png"
+      "cover": "media\\0b89ff86-2380-476e-9e9c-b68f528c7cba.png",
+      "id": 190
     }
   ],
   "artists": {
@@ -23594,8 +23595,31 @@
         13,
         1121
       ],
-      "datecreated": "9/19/2024",
+      "datecreated": 0,
       "description": "RELEASE DATE: July 16th 2010, SINGLES: Never Give Up (April, B-Side: Power Pop), You Say Goodbye (May, B-Side: Favorite Song), HELLO COLORFUL (June, B-Side: You=Music I Love)"
+    },
+    {
+      "title": "trjtrkyt",
+      "description": "trjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyttrjtrkyt",
+      "datecreated": 1727579376,
+      "tracklist": [
+        585,
+        1586,
+        394,
+        1347,
+        1730,
+        1808,
+        739
+      ]
+    },
+    {
+      "title": "New Playlist",
+      "description": "",
+      "datecreated": 1727580456,
+      "tracklist": [
+        242,
+        628
+      ]
     }
   ]
 }

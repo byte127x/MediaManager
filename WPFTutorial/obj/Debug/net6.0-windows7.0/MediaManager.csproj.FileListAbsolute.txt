@@ -85,3 +85,7 @@ C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\obj\Debug\net6.0-windows7.0\
 C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\obj\Debug\net6.0-windows7.0\MediaManager.pdb
 C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\obj\Debug\net6.0-windows7.0\MediaManager.genruntimeconfig.cache
 C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\obj\Debug\net6.0-windows7.0\ref\MediaManager.dll
+C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\obj\Debug\net6.0-windows7.0\Dialogs\PlaylistCreator.g.cs
+C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\obj\Debug\net6.0-windows7.0\Dialogs\PlaylistCreator.baml
+C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\obj\Debug\net6.0-windows7.0\Dialogs\SongSearchWindow.g.cs
+C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\obj\Debug\net6.0-windows7.0\Dialogs\SongSearchWindow.baml

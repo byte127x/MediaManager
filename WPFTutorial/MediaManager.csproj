@@ -10,9 +10,11 @@
 
   <ItemGroup>
     <None Remove="cover.png" />
+    <None Remove="Lib\add.png" />
     <None Remove="Lib\albumicon.png" />
     <None Remove="Lib\artisticon.png" />
     <None Remove="Lib\cogwheel.png" />
+    <None Remove="Lib\down.png" />
     <None Remove="Lib\loop.png" />
     <None Remove="Lib\next.png" />
     <None Remove="Lib\pause.png" />
@@ -23,6 +25,7 @@
     <None Remove="Lib\settings.png" />
     <None Remove="Lib\shuffle.png" />
     <None Remove="Lib\shuffle.svg" />
+    <None Remove="Lib\up.png" />
     <None Remove="Lib\volume.png" />
   </ItemGroup>
 
@@ -40,9 +43,11 @@
 
   <ItemGroup>
     <Resource Include="cover.png" />
+    <Resource Include="Lib\add.png" />
     <Resource Include="Lib\albumicon.png" />
     <Resource Include="Lib\artisticon.png" />
     <Resource Include="Lib\cogwheel.png" />
+    <Resource Include="Lib\up.png" />
     <Resource Include="Lib\loop.png" />
     <Resource Include="Lib\next.png" />
     <Resource Include="Lib\pause.png" />
@@ -51,6 +56,7 @@
     <Resource Include="Lib\queue.png" />
     <Resource Include="Lib\search.png" />
     <Resource Include="Lib\shuffle.png" />
+    <Resource Include="Lib\down.png" />
     <Resource Include="Lib\volume.png" />
   </ItemGroup>
 

@@ -675,6 +675,8 @@ namespace MediaManager
         public DiscordRpcClient client;
         public RichPresence discordrpc;
 
+        public List<SearchableField> allSongs = new List<SearchableField>();
+
         string[] audiofiletypes = new[] { ".wav", ".mp3", ".m4a", ".aif", ".aiff", ".wma", ".aac", ".ogg" };
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -910,7 +912,32 @@ namespace MediaManager
         }
         public int AddPlaylist(object sender)
         {
-            MessageBox.Show("New Playlist ...");
+            PlaylistCreator dialog = new PlaylistCreator();
+            App.AddMicaEffect(dialog);
+            dialog.ShowDialog();
+
+            if (dialog.DialogResult == true)
+            {
+                MessageBox.Show(dialog.PlaylistBody.InnerView.Items.Count.ToString());
+
+                JObject playlistInfo = new JObject();
+                playlistInfo["title"] = dialog.TitleInput.InternalText.Text;
+                playlistInfo["description"] = dialog.DescInput.InternalText.Text;
+                playlistInfo["datecreated"] = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+                JArray tracklist = new JArray();
+
+                foreach (ListViewItem songlvi in dialog.PlaylistBody.InnerView.Items)
+                {
+                    int songid = (int)songlvi.Tag;
+                    tracklist.Add(songid);
+                }
+                playlistInfo["tracklist"] = tracklist;
+                ((JArray)audioHandler.audioLibrary["playlists"]).Add(playlistInfo);
+            }
+
+            audioHandler.flushLibrary();
+            ClearUI();
+            CreateUI();
             return 0;
         }
         void AllowUIToUpdate()
@@ -947,6 +974,9 @@ namespace MediaManager
             homePage.RecentlyAddedGrid.ColumnDefinitions.Add(c2);
 
             songPage.columnedView.ClearItems();
+
+            playlistPage.AlbumContainer.InternalGrid.Children.Clear();
+            playlistPage.AlbumContainer.RefreshAlbumCards();
 
             yearPage.YearView.InnerView.Items.Clear();
             yearPage.AlbumContainer.InternalGrid.Children.Clear();
@@ -1057,15 +1087,19 @@ namespace MediaManager
                 JToken album = audioHandler.audioLibrary["albums"][(Int32)(song["album"])];
                 songPage.columnedView.AddItem(new string[] { (string)(song["title"]), (string)(song["artist"]), (string)(album["name"]), (string)(album["genre"]), (string)(album["year"]) });
 
-                searchPage.SongsToSearch.Add(new SearchableField(song["title"].ToString(), songid, 2));
+                allSongs.Add(new SearchableField(song["title"].ToString(), songid, 2));
 
                 songid++;
             }
+            searchPage.SongsToSearch = allSongs;
 
             // Load Playlists in Playlist Tab
             playlistPage.AddPlaylistBtn.ExtraMouseUp = AddPlaylist;
             playlistPage.InternalGrid.Children.Remove(playlistPage.AddPlaylistBtn);
-            playlistPage.AlbumContainer.InternalGrid.Children.Add(playlistPage.AddPlaylistBtn);
+            if (playlistPage.AddPlaylistBtn.Parent == null)
+            {
+                playlistPage.AlbumContainer.InternalGrid.Children.Add(playlistPage.AddPlaylistBtn);
+            }
             int playlistid = 0;
             foreach (JToken playlist in audioHandler.audioLibrary["playlists"])
             {
@@ -1083,6 +1117,7 @@ namespace MediaManager
                 playlistPage.AlbumContainer.InternalGrid.Children.Add(card);
 
                 searchPage.PlaylistsToSearch.Add(new SearchableField((string)playlist["title"], playlistid, 3));
+                playlistid++;
             }
             playlistPage.AlbumContainer.RefreshAlbumCards();
 
@@ -1297,7 +1332,12 @@ namespace MediaManager
             }
 
             page.Tag = card.albumId;
-            page.UpdatePlaylistInfo((string)playlistInfo["title"], (string)playlistInfo["datecreated"], (string)playlistInfo["description"], (string)playlistInfo["cover"], tracklist);
+
+            int unixTimestampCreated = (int)playlistInfo["datecreated"];
+            DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            dateTime = dateTime.AddSeconds(unixTimestampCreated).ToLocalTime();
+
+            page.UpdatePlaylistInfo((string)playlistInfo["title"], dateTime.ToString("d"), (string)playlistInfo["description"], (string)playlistInfo["cover"], tracklist);
             page.ColumnedView.songPlaybackFunction = (int songid) => { return audioHandler.PlayPlaylist(songid, card.albumId); };
 
             sidePanelControl.activeButton.IsChecked = false;

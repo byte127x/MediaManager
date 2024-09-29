@@ -10,10 +10,16 @@
     <Compile Update="Dialogs\FileProgressbarDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Dialogs\PlaylistCreator.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Dialogs\PreviewAlbumArtWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Dialogs\SongContextMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Dialogs\SongSearchWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Widgets\AddFolderButton.xaml.cs">
@@ -69,10 +75,16 @@
     <Page Update="Dialogs\FileProgressbarDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Dialogs\PlaylistCreator.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Dialogs\PreviewAlbumArtWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Dialogs\SongContextMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\SongSearchWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

@@ -79,7 +79,6 @@ namespace MediaManager
         public long BytesPerSecond;
         public JObject audioLibrary;
 
-        //LastfmClient fmclient = new LastfmClient("d252e044140298ad60e0ac1ab2b87f3f", "7e9fae2669536dff6deadcf618fce65a");
         public AudioHandler()
         {
             Queue = new List<int>();
@@ -807,6 +806,12 @@ namespace MediaManager
         {
             audioHandler.audioFile.Volume = (float)VolumeSlider.Value;
         }
+
+        public void SettingsDialog()
+        {
+            SettingsDialog dlg = new SettingsDialog();
+            dlg.ShowDialog();
+        }
         public void ToggleVolume()
         {
             bool volumeShowing = (VolumeSection.Height.Value != 0);
@@ -1085,7 +1090,13 @@ namespace MediaManager
             foreach (JToken song in audioHandler.audioLibrary["songs"])
             {
                 JToken album = audioHandler.audioLibrary["albums"][(Int32)(song["album"])];
-                songPage.columnedView.AddItem(new string[] { (string)(song["title"]), (string)(song["artist"]), (string)(album["name"]), (string)(album["genre"]), (string)(album["year"]) });
+
+                string? year = (string)(album["year"]);
+                if (year == "0")
+                {
+                    year = "";
+                }
+                songPage.columnedView.AddItem(new string[] { (string)(song["title"]), (string)(song["artist"]), (string)(album["name"]), (string)(album["genre"]), year });
 
                 allSongs.Add(new SearchableField(song["title"].ToString(), songid, 2));
 

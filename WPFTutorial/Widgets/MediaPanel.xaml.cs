@@ -195,6 +195,7 @@ namespace MediaManager.Widgets
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
         {
+            audioHandler.mainWindow.SettingsDialog();
         }
 
         private void loopButton_Click(object sender, RoutedEventArgs e)

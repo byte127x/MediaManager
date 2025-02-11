@@ -16,6 +16,9 @@
     <Compile Update="Dialogs\PreviewAlbumArtWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Dialogs\SettingsDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Dialogs\SongContextMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -79,6 +82,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Dialogs\PreviewAlbumArtWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\SettingsDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Dialogs\SongContextMenu.xaml">

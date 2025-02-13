@@ -19,10 +19,38 @@ namespace MediaManager.Dialogs
     /// </summary>
     public partial class SettingsDialog : Window
     {
+        public Settings settings;
         public SettingsDialog()
         {
             InitializeComponent();
             App.AddMicaEffect(this);
+        }
+
+        public void ApplySettings(Settings? s)
+        {
+            if (s != null)
+            {
+                settings = s;
+            }
+
+            if (settings.username == null)
+            {
+                usernameInput.InternalText.Text = "No Username";
+            } else
+            {
+                usernameInput.InternalText.Text = settings.username;
+            }
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            settings.username = usernameInput.InternalText.Text;
+            this.Close();
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

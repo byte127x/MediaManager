@@ -4,19 +4,38 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediaManager.Dialogs"
+        xmlns:wgts="clr-namespace:MediaManager.Widgets"
         mc:Ignorable="d"
         Background="Transparent"
         Title="SettingsDialog" Height="450" Width="800">
     <Border Margin="10" Style="{StaticResource CardFrame}">
-        <StackPanel Margin="10">
+        <DockPanel>
+            <StackPanel Margin="20" DockPanel.Dock="Top">
 
-            <TextBlock Text="Settings:" FontSize="32"/>
-            <Separator Grid.Row="1" Background="#24ffffff" Margin="0,5"/>
-            <ComboBox HorizontalAlignment="Left">
-                <ComboBoxItem Content="Hello" Foreground="Black"/>
-                <ComboBoxItem Content="World" Foreground="Black"/>
-                <ComboBoxItem Content=":3" Foreground="Black"/>
-            </ComboBox>
-        </StackPanel>
+                <TextBlock Text="Settings:" FontSize="32"/>
+                <Separator Grid.Row="1" Background="#24ffffff" Margin="0,5"/>
+                <Grid Margin="5" Height="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" MaxWidth="300"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Username:" VerticalAlignment="Center" FontSize="14"/>
+                    <wgts:SingleLineInput x:Name="usernameInput" Grid.Column="2"/>
+                </Grid>
+            </StackPanel>
+
+            <Grid VerticalAlignment="Bottom" Margin="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Cancel" Grid.Column="1" Padding="10,5" Name="CancelButton" Click="CancelButton_Click"/>
+                <Button Content="Save" Grid.Column="3" Padding="10,5" Name="SaveButton" Click="SaveButton_Click"/>
+            </Grid>
+        </DockPanel>
     </Border>
 </Window>

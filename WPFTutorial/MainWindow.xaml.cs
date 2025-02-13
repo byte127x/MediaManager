@@ -37,6 +37,7 @@ using DiscordRPC.Logging;
 using DiscordRPC;
 using NAudio.Midi;
 using FolderBrowserDialog = System.Windows.Forms.FolderBrowserDialog;
+using NAudio.Gui;
 
 namespace MediaManager
 {
@@ -163,6 +164,7 @@ namespace MediaManager
                     {
                         audioFile = new NAudio.Vorbis.VorbisWaveReader(currentMedia["path"].ToString());
                     }
+                    audioFile.Volume = (float)mainWindow.VolumeSlider.Value;
                     outputDevice.Init(audioFile);
 
                     mediaPanel.updateMetadata(currentMedia);
@@ -708,6 +710,7 @@ namespace MediaManager
 
             this.PreviewMouseDown += CloseAllDialogs;
             this.Closed += CloseAllDialogs;
+            this.Closed += SaveSettingsData;
             songPage.Tag = "SongPage";
             audioHandler.mainWindow = this;
             audioHandler.mediaPanel = mediaPanelControl;
@@ -726,7 +729,7 @@ namespace MediaManager
             settings.username = (string)(settingsJson["username"]);
             settings.volume = (float)(settingsJson["volume"]);
             settings.lastqueue = (JArray)(settingsJson["lastqueue"]);
-            settings.lastidx = (int)(settingsJson["lastindex"]);
+            settings.lastidx = (int)(settingsJson["lastidx"]);
 
             /*
             Create a Discord client
@@ -794,6 +797,8 @@ namespace MediaManager
 
             songPage.columnedView.songPlaybackFunction = audioHandler.PlayAllSongs;
 
+            VolumeSlider.Value = settings.volume;
+
             CreateUI();
             changeFrame("homeBtn");
             if (audioHandler.Queue.Count > 0)
@@ -802,14 +807,36 @@ namespace MediaManager
             }
             SystemSounds.Asterisk.Play();
         }
+        public void SaveSettingsData(object sender, dynamic? _)
+        {
+            // Compress settings down to a JSON
+            JObject settingsJson = new JObject();
+            settingsJson["username"] = settings.username;
+            settingsJson["volume"] = settings.volume;
+            settingsJson["lastidx"] = settings.lastidx;
+            settingsJson["lastqueue"] = settings.lastqueue;
+
+            using (StreamWriter outputFile = new StreamWriter(@"media\settings.json"))
+            {
+                outputFile.WriteLine(
+                    settingsJson.ToString()
+                );
+            }
+        }
+
         public void VolumeChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            audioHandler.audioFile.Volume = (float)VolumeSlider.Value;
+            settings.volume = (float)VolumeSlider.Value;
+            if (audioHandler.audioFile != null)
+            {
+                audioHandler.audioFile.Volume = settings.volume;
+            }
         }
 
         public void SettingsDialog()
         {
             SettingsDialog dlg = new SettingsDialog();
+            dlg.ApplySettings(settings);
             dlg.ShowDialog();
         }
         public void ToggleVolume()

@@ -38,6 +38,9 @@ using DiscordRPC;
 using NAudio.Midi;
 using FolderBrowserDialog = System.Windows.Forms.FolderBrowserDialog;
 using NAudio.Gui;
+using NVorbis;
+using NVorbis.Contracts;
+using NAudio.CoreAudioApi;
 
 namespace MediaManager
 {
@@ -164,19 +167,25 @@ namespace MediaManager
                     {
                         audioFile = new NAudio.Vorbis.VorbisWaveReader(currentMedia["path"].ToString());
                     }
-                    audioFile.Volume = (float)mainWindow.VolumeSlider.Value;
+
                     outputDevice.Init(audioFile);
 
                     mediaPanel.updateMetadata(currentMedia);
 
                     // Figure out bytes per second for seeking purposes
                     var lengthInBytes = audioFile.Length;
-                    BytesPerSecond = (long)lengthInBytes / (long)audioFile.TotalTime.TotalSeconds;
+                    long totalSeconds = (long)audioFile.TotalTime.TotalSeconds;
+                    if (totalSeconds < 0.1) {
+                        totalSeconds = 1;
+                    }
+
+                    BytesPerSecond = (long)lengthInBytes / totalSeconds;
                 } catch (System.ArgumentOutOfRangeException)
                 {
                     return 1;
                 }
             }
+            outputDevice.Volume = (float)mainWindow.VolumeSlider.Value;
             outputDevice.Play();
             Playing = true;
             
@@ -448,6 +457,11 @@ namespace MediaManager
             string genre = tags.Tag.FirstGenre;
             uint year = tags.Tag.Year;
 
+            if (title == null)
+            {
+                title = System.IO.Path.GetFileName(path);
+            }
+
             if (albumartist == null)
             {
                 albumartist = songartist;
@@ -516,8 +530,24 @@ namespace MediaManager
             numberPlusId.Add(song_id);
             tlist.Add(numberPlusId);
 
+
             album_dict["tracklist"] = tlist;
             JObject song_dict = new JObject();
+
+            // Store song length ahead of time
+            dynamic a; // Either AudioFileReader, or VorbisReader if ogg vorbis audio is imported
+            try
+            {
+                a = new AudioFileReader(path);
+            }
+            catch (COMException e)
+            {
+                a = new VorbisReader(path);
+            }
+
+            song_dict["duration"] = Math.Round(a.TotalTime.TotalSeconds, 2);
+
+
             song_dict["title"] = title;
             song_dict["album"] = album_id;
             song_dict["artist"] = songartist;
@@ -827,9 +857,9 @@ namespace MediaManager
         public void VolumeChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             settings.volume = (float)VolumeSlider.Value;
-            if (audioHandler.audioFile != null)
+            if (audioHandler.outputDevice != null)
             {
-                audioHandler.audioFile.Volume = settings.volume;
+                audioHandler.outputDevice.Volume = settings.volume;
             }
         }
 
@@ -851,7 +881,7 @@ namespace MediaManager
                 VolumeSection.Height = new GridLength(60);
                 if (audioHandler.audioFile != null)
                 {
-                    VolumeSlider.Value = (double)audioHandler.audioFile.Volume;
+                    VolumeSlider.Value = (double)audioHandler.outputDevice.Volume;
                 }
                 if (!queueShowing) {
                     ToggleQueue();
@@ -1282,10 +1312,7 @@ namespace MediaManager
                 addedTrack.Add(track[1]);
 
                 // Get Audio Length
-
-                AudioFileReader a = new AudioFileReader((string)audioHandler.audioLibrary["songs"][(Int32)(track[1])]["path"]);
-                //addedTrack.Add("7:77");
-                addedTrack.Add(a.TotalTime.TotalSeconds);
+                addedTrack.Add((float)audioHandler.audioLibrary["songs"][(Int32)(track[1])]["duration"]);
 
                 tracklist.Add(addedTrack);
             }

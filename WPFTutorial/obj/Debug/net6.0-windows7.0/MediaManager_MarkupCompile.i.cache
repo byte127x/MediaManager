@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\iONSZ\source\repos\WPFTutorial\WPFTutorial\App.xaml
-232145634331
+241915750938
 
-31-1454513688
+32-268200056
 222541375377
-Dialogs\FileProgressbarDialog.xaml;Dialogs\PlaylistCreator.xaml;Dialogs\PreviewAlbumArtWindow.xaml;Dialogs\SongContextMenu.xaml;Dialogs\SongSearchWindow.xaml;MainWindow.xaml;Widgets\AddFolderButton.xaml;Widgets\AlbumCard.xaml;Widgets\CustomListView.xaml;Widgets\DynamicAlbumContainer.xaml;Widgets\FlatToggleButton.xaml;Widgets\MainPages\AlbumPage.xaml;Widgets\MainPages\AlbumViewingPage.xaml;Widgets\MainPages\ArtistPage.xaml;Widgets\MainPages\HomePage.xaml;Widgets\MainPages\PlaylistPage.xaml;Widgets\MainPages\SearchPage.xaml;Widgets\MainPages\SongsPage.xaml;Widgets\MainPages\YearsPage.xaml;Widgets\MediaPanel.xaml;Widgets\SidePanel.xaml;Widgets\SingleLineInput.xaml;Widgets\SongsPageColumnView.xaml;
+Dialogs\FileProgressbarDialog.xaml;Dialogs\PlaylistCreator.xaml;Dialogs\PreviewAlbumArtWindow.xaml;Dialogs\SettingsDialog.xaml;Dialogs\SongContextMenu.xaml;Dialogs\SongSearchWindow.xaml;MainWindow.xaml;Widgets\AddFolderButton.xaml;Widgets\AlbumCard.xaml;Widgets\CustomListView.xaml;Widgets\DynamicAlbumContainer.xaml;Widgets\FlatToggleButton.xaml;Widgets\MainPages\AlbumPage.xaml;Widgets\MainPages\AlbumViewingPage.xaml;Widgets\MainPages\ArtistPage.xaml;Widgets\MainPages\HomePage.xaml;Widgets\MainPages\PlaylistPage.xaml;Widgets\MainPages\SearchPage.xaml;Widgets\MainPages\SongsPage.xaml;Widgets\MainPages\YearsPage.xaml;Widgets\MediaPanel.xaml;Widgets\SidePanel.xaml;Widgets\SingleLineInput.xaml;Widgets\SongsPageColumnView.xaml;
 
 True
 

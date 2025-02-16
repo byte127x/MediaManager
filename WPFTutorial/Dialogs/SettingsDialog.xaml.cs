@@ -52,5 +52,15 @@ namespace MediaManager.Dialogs
         {
             this.Close();
         }
+
+        private void LibraryDataDelete_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to clear your music library data? (No files will be deleted)", "Delete Library Data", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            
+            if (result == MessageBoxResult.Yes) {
+                settings.ClearLibraryData();
+                MessageBox.Show("Library data cleared.", "Delete Library Data", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
+        }
     }
 }

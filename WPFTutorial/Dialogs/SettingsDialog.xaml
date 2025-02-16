@@ -7,13 +7,13 @@
         xmlns:wgts="clr-namespace:MediaManager.Widgets"
         mc:Ignorable="d"
         Background="Transparent"
-        Title="SettingsDialog" Height="450" Width="800">
+        Title="Settings" Height="450" Width="800">
     <Border Margin="10" Style="{StaticResource CardFrame}">
         <DockPanel>
             <StackPanel Margin="20" DockPanel.Dock="Top">
 
                 <TextBlock Text="Settings:" FontSize="32"/>
-                <Separator Grid.Row="1" Background="#24ffffff" Margin="0,5"/>
+                <Separator Grid.Row="1" Background="#24ffffff" Margin="0,5,0,10"/>
                 <Grid Margin="5" Height="25">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto" />
@@ -23,9 +23,10 @@
                     <TextBlock Text="Username:" VerticalAlignment="Center" FontSize="14"/>
                     <wgts:SingleLineInput x:Name="usernameInput" Grid.Column="2"/>
                 </Grid>
+                <Button Content="Delete Library Data" Width="125" Height="30" HorizontalAlignment="Left" Margin="0,5" Style="{StaticResource DangerButton}" Name="LibraryDataDelete" Click="LibraryDataDelete_Click"/>
             </StackPanel>
 
-            <Grid VerticalAlignment="Bottom" Margin="15">
+            <Grid VerticalAlignment="Bottom"  Margin="15,0,15,15" Height="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
@@ -33,8 +34,9 @@
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Cancel" Grid.Column="1" Padding="10,5" Name="CancelButton" Click="CancelButton_Click"/>
-                <Button Content="Save" Grid.Column="3" Padding="10,5" Name="SaveButton" Click="SaveButton_Click"/>
+                <Button Content="Cancel" Grid.Column="1" Width="60" Name="CancelButton" Click="CancelButton_Click"/>
+                <Button Content="Save" Grid.Column="3" Width="60" Name="SaveButton" Click="SaveButton_Click"/>
+                
             </Grid>
         </DockPanel>
     </Border>

@@ -684,6 +684,8 @@ namespace MediaManager
         public float volume;
         public JArray? lastqueue;
         public int lastidx;
+
+        public Func<int>? ClearLibraryData;
     }
 
     public partial class MainWindow : Window
@@ -760,6 +762,27 @@ namespace MediaManager
             settings.volume = (float)(settingsJson["volume"]);
             settings.lastqueue = (JArray)(settingsJson["lastqueue"]);
             settings.lastidx = (int)(settingsJson["lastidx"]);
+            settings.ClearLibraryData = () =>
+            {
+                audioHandler.audioLibrary["albums"] = new JArray();
+                audioHandler.audioLibrary["songs"] = new JArray();
+                audioHandler.audioLibrary["artists"] = new JObject();
+                audioHandler.audioLibrary["playlists"] = new JArray();
+
+                audioHandler.artistList = new List<string>();
+
+                using (StreamWriter outputFile = new StreamWriter(@"media\library.json"))
+                {
+                    outputFile.WriteLine(
+                        audioHandler.audioLibrary.ToString()
+                    );
+                }
+
+                ClearUI();
+                CreateUI();
+
+                return 0;
+            };
 
             /*
             Create a Discord client
@@ -1348,11 +1371,7 @@ namespace MediaManager
                 addedTrack.Add(track[1]);
 
                 // Get Audio Length
-
-                //MessageBox.Show(System.IO.File.Exists((string)audioHandler.audioLibrary["songs"][(Int32)(track[1])]["path"]).ToString());
-                AudioFileReader a = new AudioFileReader((string)audioHandler.audioLibrary["songs"][(Int32)(track[1])]["path"]);
-                //addedTrack.Add("7:77");
-                addedTrack.Add(a.TotalTime.TotalSeconds);
+                addedTrack.Add((float)audioHandler.audioLibrary["songs"][(Int32)(track[1])]["duration"]);
 
                 tracklist.Add(addedTrack);
             }
@@ -1388,9 +1407,7 @@ namespace MediaManager
 
                 // Get Audio Length
 
-                AudioFileReader a = new AudioFileReader((string)audioHandler.audioLibrary["songs"][(Int32)(track)]["path"]);
-                //addedTrack.Add("7:77");
-                addedTrack.Add(a.TotalTime.TotalSeconds);
+                addedTrack.Add((float)audioHandler.audioLibrary["songs"][(Int32)(track)]["duration"]);
 
                 tracklist.Add(addedTrack);
                 tracknum++;

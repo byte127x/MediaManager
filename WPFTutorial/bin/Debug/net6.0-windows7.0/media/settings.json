@@ -1,6 +1,18 @@
 {
-  "username": null,
-  "volume": 1.0,
+  "username": "byteemi",
+  "volume": 0.9497207,
   "lastidx": 0,
-  "lastqueue": []
+  "lastqueue": [],
+  "equalizer": [
+    0.0,
+    0.0,
+    0.0,
+    -10.0,
+    10.0,
+    -10.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
 }

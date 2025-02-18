@@ -63,7 +63,15 @@ namespace MediaManager.Widgets
                 img.UriSource = new Uri("pack://application:,,,/../Lib/albumicon.png");
             }
             albumImg.ImageSource = img;
-            img.EndInit();
+
+            try
+            {
+                img.EndInit();
+            }
+            catch (System.IO.FileNotFoundException e)
+            {
+                setCardInfo(albumTitle, artistTitle, null);
+            }
         }
         public void onHover(object sender, RoutedEventArgs e)
         {

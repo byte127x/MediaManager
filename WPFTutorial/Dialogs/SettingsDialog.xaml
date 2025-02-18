@@ -7,10 +7,15 @@
         xmlns:wgts="clr-namespace:MediaManager.Widgets"
         mc:Ignorable="d"
         Background="Transparent"
-        Title="Settings" Height="450" Width="800">
+        Title="Settings" Height="390" Width="800">
     <Border Margin="10" Style="{StaticResource CardFrame}">
-        <DockPanel>
-            <StackPanel Margin="20" DockPanel.Dock="Top">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Margin="20" DockPanel.Dock="Top">
+            <StackPanel>
 
                 <TextBlock Text="Settings:" FontSize="32"/>
                 <Separator Grid.Row="1" Background="#24ffffff" Margin="0,5,0,10"/>
@@ -23,10 +28,54 @@
                     <TextBlock Text="Username:" VerticalAlignment="Center" FontSize="14"/>
                     <wgts:SingleLineInput x:Name="usernameInput" Grid.Column="2"/>
                 </Grid>
-                <Button Content="Delete Library Data" Width="125" Height="30" HorizontalAlignment="Left" Margin="0,5" Style="{StaticResource DangerButton}" Name="LibraryDataDelete" Click="LibraryDataDelete_Click"/>
-            </StackPanel>
+                <TextBlock Text="Equalizer:" VerticalAlignment="Center" FontSize="14" Margin="5,5,5,0"/>
+                <Grid Name="EqualizerGrid" Height="120" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
 
-            <Grid VerticalAlignment="Bottom"  Margin="15,0,15,15" Height="25">
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider0" Orientation="Vertical" Grid.Column="0" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider1" Orientation="Vertical" Grid.Column="1" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider2" Orientation="Vertical" Grid.Column="2" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider3" Orientation="Vertical" Grid.Column="3" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider4" Orientation="Vertical" Grid.Column="4" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider5" Orientation="Vertical" Grid.Column="5" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider6" Orientation="Vertical" Grid.Column="6" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider7" Orientation="Vertical" Grid.Column="7" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider8" Orientation="Vertical" Grid.Column="8" Minimum="0" Maximum="20" Value="10"/>
+                    <Slider Style="{StaticResource VerticalSlider}" Name="EqualizerSlider9" Orientation="Vertical" Grid.Column="9" Minimum="0" Maximum="20" Value="10"/>
+
+                    <TextBlock Text="32" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                    <TextBlock Text="64" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+                    <TextBlock Text="128" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2"/>
+                    <TextBlock Text="256" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3"/>
+                    <TextBlock Text="512" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="4"/>
+                    <TextBlock Text="1K" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="5"/>
+                    <TextBlock Text="2K" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="6"/>
+                    <TextBlock Text="4K" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="7"/>
+                    <TextBlock Text="8K" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="8"/>
+                    <TextBlock Text="16K" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="9"/>
+                </Grid>
+
+                <Button Content="Reset Equalizer" Width="110" Name="ResetEqualizerButton" Click="ResetEqualizerButton_Click" HorizontalAlignment="Left" Height="25" Margin="10"/>
+                <Button Content="Delete Library Data" Width="125" Height="30" HorizontalAlignment="Left" Margin="0,10" Style="{StaticResource DangerButton}" Name="LibraryDataDelete" Click="LibraryDataDelete_Click"/>
+            </StackPanel>
+            </ScrollViewer>
+
+            <Grid VerticalAlignment="Bottom" Grid.Row="1" Margin="15,0,15,15" Height="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
@@ -34,10 +83,10 @@
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Cancel" Grid.Column="1" Width="60" Name="CancelButton" Click="CancelButton_Click"/>
+                <Button Content="Cancel" Grid.Column="1" Width="60" Name="CancelButton" Click="CancelButton_Click" Height="25" VerticalAlignment="Top"/>
                 <Button Content="Save" Grid.Column="3" Width="60" Name="SaveButton" Click="SaveButton_Click"/>
                 
             </Grid>
-        </DockPanel>
+        </Grid>
     </Border>
 </Window>

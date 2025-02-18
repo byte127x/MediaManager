@@ -5466,7 +5466,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iONSZ\\.nuget\\packages\\": {}
+    "C:\\Users\\iONSZ\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5477,8 +5478,12 @@
       "packagesPath": "C:\\Users\\iONSZ\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\iONSZ\\source\\repos\\WPFTutorial\\WPFTutorial\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\iONSZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5557,24 +5562,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.32, 6.0.32]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.32, 6.0.32]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.32, 6.0.32]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.32, 6.0.32]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

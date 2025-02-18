@@ -22,7 +22,7 @@
             <Style TargetType="Image">
                 <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality"/>
             </Style>
-            
+
             <!-- Storyboards -->
             <Storyboard x:Key="mouseEnterBeginStoryboard">
                 <ColorAnimation To="#55484848" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" Duration="0:0:0.15"/>
@@ -53,7 +53,7 @@
             <Storyboard x:Key="buttonStartClick">
                 <ColorAnimation To="#08ffffff" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" Duration="0:0:0.1"/>
             </Storyboard>
-            
+
             <Storyboard x:Key="dangerButtonStartHover">
                 <ColorAnimation To="#78f44666" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" Duration="0:0:0.05"/>
             </Storyboard>
@@ -156,7 +156,7 @@
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
-                
+
                 <Style.Resources>
                     <Style TargetType="Image">
                         <Setter Property="Margin" Value="4"/>
@@ -229,7 +229,7 @@
             <Style TargetType="Button" x:Key="DangerButton">
                 <Setter Property="Background" Value="#60f44666"/>
                 <Setter Property="BorderBrush" Value="#32f44666"/>
-                
+
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
@@ -269,7 +269,7 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-            
+
             <Style TargetType="Button" x:Key="FlatButton">
                 <Setter Property="Height" Value="32"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
@@ -325,8 +325,8 @@
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
-                
-                
+
+
                 <!--
                 <Style.Triggers>
                     <DataTrigger Binding="{Binding IsButtonClicked}" Value="True">
@@ -353,10 +353,10 @@
                         </BeginStoryboard>
                     </EventTrigger>
                 </Style.Triggers>-->
-                
-                
-                
-                
+
+
+
+
                 <Style.Resources>
                     <Style TargetType="Image">
                         <Setter Property="Margin" Value="4"/>
@@ -379,7 +379,7 @@
             </Style>
 
             <!-- Slider -->
-            <Style TargetType="Ellipse" x:Key="Slider_SmolEllipse">
+            <Style TargetType="{x:Type Shape}" x:Key="Slider_SmolEllipse">
                 <Setter Property="Fill" Value="#7ed2fc"/>
                 <Setter Property="Width" Value="12"/>
                 <Setter Property="Height" Value="12"/>
@@ -436,8 +436,53 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+            <Style TargetType="{x:Type Slider}" x:Key="VerticalSlider">
+
+                <Setter Property="SelectionStart" Value="0"/>
+                <Setter Property="SelectionEnd" Value="{Binding RelativeSource={RelativeSource Self}, Path=Value}"/>
+                <Setter Property="IsSelectionRangeEnabled" Value="True"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Slider}">
+
+                            <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Border Background="#CCCCCC" Width="3" CornerRadius="1.5" Margin="0,10"/>
+                                    <Border x:Name="PART_SelectionRange"  Margin="0,10"
+                        Background="#7ed2fc" 
+                        Width="3"
+                        VerticalAlignment="Bottom"/>
+
+                                    <Track x:Name="PART_Track">
+                                        <Track.Thumb>
+                                            <Thumb>
+                                                <Thumb.Template>
+                                                    <ControlTemplate>
+                                                        <Grid Width="20" Height="20">
+
+                                                            <Rectangle Width="20" Height="15" Fill="#555" RadiusX="4" RadiusY="4"/>
+                                                            <Rectangle Style="{StaticResource Slider_SmolEllipse}" MouseDown="Ellipse_MouseDown" x:Name="innerEllipse" HorizontalAlignment="Center" VerticalAlignment="Center" Height="10" Width="15" RadiusX="2" RadiusY="2"/>
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </Thumb.Template>
+                                            </Thumb>
+                                        </Track.Thumb>
+                                    </Track>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
         </ResourceDictionary>
-        
-        
     </Application.Resources>
 </Application>

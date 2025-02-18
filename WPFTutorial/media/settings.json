@@ -2,5 +2,6 @@
   "username": null,
   "volume": 0.5,
   "lastqueue": [],
-  "lastindex":  0
+  "lastindex": 0,
+  "equalizer": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 }

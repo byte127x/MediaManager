@@ -41,13 +41,78 @@ using NAudio.Gui;
 using NVorbis;
 using NVorbis.Contracts;
 using NAudio.CoreAudioApi;
+using NAudio.Dsp;
+using System.Threading.Channels;
 
 namespace MediaManager
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    
+
+    class FilteredAudio : ISampleProvider
+    {
+        private ISampleProvider sourceProvider;
+        private float cutOffFreq;
+        private int channels;
+        private BiQuadFilter[] filters;
+        private float intensity;
+        private string filterType;
+
+        public FilteredAudio(ISampleProvider sourceProvider, int cutOffFreq, float intensity, string filterType)
+        {
+            this.sourceProvider = sourceProvider;
+            this.cutOffFreq = cutOffFreq;
+            this.filterType = filterType;
+            this.intensity = intensity;
+
+            channels = sourceProvider.WaveFormat.Channels;
+            filters = new BiQuadFilter[channels];
+            CreateFilters();
+        }
+
+        void CreateFilters()
+        {
+            for (int n = 0; n < channels; n++)
+                if (filters[n] == null)
+                {
+                    if (filterType == "HighPass")
+                    { filters[n] = BiQuadFilter.HighPassFilter(44100, cutOffFreq, 1); }
+                    else if (filterType == "LowPass")
+                    { filters[n] = BiQuadFilter.LowPassFilter(44100, 500, 1f); }
+                    else
+                    {
+                        filters[n] = BiQuadFilter.PeakingEQ(44100, cutOffFreq, 0.25f, intensity);
+                        
+                    }
+                }
+                else
+                {
+                    filters[n].SetHighPassFilter(44100, cutOffFreq, 1);
+
+                    if (filterType == "HighPass")
+                    { filters[n].SetHighPassFilter(44100, cutOffFreq, 1); }
+                    else if (filterType == "LowPass")
+                    { filters[n].SetLowPassFilter(44100, cutOffFreq, 1f); }
+                    else {
+                        filters[n].SetPeakingEq(44100, cutOffFreq, 0.25f, intensity);
+                    }
+                }
+        }
+
+        public WaveFormat WaveFormat { get { return sourceProvider.WaveFormat; } }
+
+        public int Read(float[] buffer, int offset, int count)
+        {
+            int samplesRead = sourceProvider.Read(buffer, offset, count);
+
+            for (int i = 0; i < samplesRead; i++)
+                buffer[offset + i] = filters[(i % channels)].Transform(buffer[offset + i]);
+
+            return samplesRead;
+        }
+    }
+
     public class AudioHandler
     {
         // Shuffling
@@ -161,14 +226,31 @@ namespace MediaManager
                     var currentMedia = audioLibrary["songs"][Queue[Index]];
                     try
                     {
-                        audioFile = new AudioFileReader(currentMedia["path"].ToString());
+                        audioFile = (new AudioFileReader(currentMedia["path"].ToString()));
+
+
                     }
                     catch (COMException)
                     {
-                        audioFile = new NAudio.Vorbis.VorbisWaveReader(currentMedia["path"].ToString());
+                        audioFile = (new NAudio.Vorbis.VorbisWaveReader(currentMedia["path"].ToString()));
+
                     }
 
-                    outputDevice.Init(audioFile);
+                    var filter0 = new FilteredAudio(audioFile, 32, mainWindow.settings.equalizer[0], "MidPass");
+                    var filter1 = new FilteredAudio(audioFile, 64, mainWindow.settings.equalizer[1], "MidPass");
+                    var filter2 = new FilteredAudio(audioFile, 128, mainWindow.settings.equalizer[2], "MidPass");
+                    var filter3 = new FilteredAudio(audioFile, 256, mainWindow.settings.equalizer[3], "MidPass");
+                    var filter4 = new FilteredAudio(audioFile, 512, mainWindow.settings.equalizer[4], "MidPass");
+                    var filter5 = new FilteredAudio(audioFile, 1024, mainWindow.settings.equalizer[5], "MidPass");
+                    var filter6 = new FilteredAudio(audioFile, 2048, mainWindow.settings.equalizer[6], "MidPass");
+                    var filter7 = new FilteredAudio(audioFile, 4096, mainWindow.settings.equalizer[7], "MidPass");
+                    var filter8 = new FilteredAudio(audioFile, 8192, mainWindow.settings.equalizer[8], "MidPass");
+                    var filter9 = new FilteredAudio(audioFile, 16384, mainWindow.settings.equalizer[9], "MidPass");
+
+                    //outputDevice.Init(audioFile);
+
+                    outputDevice.Init(filter1);
+
 
                     mediaPanel.updateMetadata(currentMedia);
 
@@ -678,14 +760,22 @@ namespace MediaManager
             return 0;
         }
     }
-    public class Settings
+    public class Settings : ICloneable
     {
         public string? username;
         public float volume;
         public JArray? lastqueue;
         public int lastidx;
 
+        public float[] equalizer = { 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f };
+
         public Func<int>? ClearLibraryData;
+        public Func<int>? UpdateEqualizerData;
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 
     public partial class MainWindow : Window
@@ -738,6 +828,7 @@ namespace MediaManager
         public MainWindow()
         {
             InitializeComponent();
+
             //WindowExtensions.InitTitlebarTheme(this);
 
             this.PreviewMouseDown += CloseAllDialogs;
@@ -762,6 +853,14 @@ namespace MediaManager
             settings.volume = (float)(settingsJson["volume"]);
             settings.lastqueue = (JArray)(settingsJson["lastqueue"]);
             settings.lastidx = (int)(settingsJson["lastidx"]);
+            settings.equalizer = new float[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                float bar = (float)((JArray)settingsJson["equalizer"])[i];
+                settings.equalizer[i] = bar;
+            }
+
             settings.ClearLibraryData = () =>
             {
                 audioHandler.audioLibrary["albums"] = new JArray();
@@ -783,6 +882,24 @@ namespace MediaManager
 
                 return 0;
             };
+
+            settings.UpdateEqualizerData = () =>
+            {
+                if (audioHandler.audioFile != null)
+                {
+                    var pos = audioHandler.audioFile.Position;
+                    audioHandler.Stop();
+                    audioHandler.PlayAudio();
+                    audioHandler.audioFile.Position = pos;
+                }
+
+                return 0;
+            };
+
+            if (settings.username != null)
+            {
+                homePage.WelcomeText.Text = $"Welcome {settings.username}...";
+            }
 
             /*
             Create a Discord client
@@ -869,12 +986,22 @@ namespace MediaManager
             settingsJson["lastidx"] = settings.lastidx;
             settingsJson["lastqueue"] = settings.lastqueue;
 
+            JArray eq = new JArray();
+            foreach (float value in settings.equalizer)
+            {
+                eq.Add(value);
+            }
+            settingsJson["equalizer"] = eq;
+
+            homePage.WelcomeText.Text = $"Welcome {settings.username}...";
+
             using (StreamWriter outputFile = new StreamWriter(@"media\settings.json"))
             {
                 outputFile.WriteLine(
                     settingsJson.ToString()
                 );
             }
+
         }
 
         public void VolumeChange(object sender, RoutedPropertyChangedEventArgs<double> e)

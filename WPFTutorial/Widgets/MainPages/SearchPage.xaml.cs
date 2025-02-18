@@ -48,6 +48,11 @@ namespace MediaManager.Widgets.MainPages
         }
         public void ComputeSearch(string searchText)
         {
+            if (searchText.Length < 2)
+            {
+                return;
+            }
+
             AlbumContainer.InternalGrid.Children.Clear();
             if (searchText == "") {
                 AlbumContainer.RefreshAlbumCards();

@@ -17047,6 +17047,54 @@
       "artist": "Allister",
       "lyrics": null,
       "path": "E:\\Music\\Allister\\2002 - Last Stop Suburbia\\oyasumi extracted\\Music\\Allister\\2002 - Last Stop Suburbia\\05 - Better Late Than Forever.m4a"
+    },
+    {
+      "duration": 196.36,
+      "title": "(Can't Remember) How We Used To Be",
+      "album": 55,
+      "artist": "Ellegarden",
+      "lyrics": null,
+      "path": "E:\\Music\\ELLEGARDEN\\2002 - My Own Destruction (EP)\\01 - (Can't Remember) How We Used To Be.m4a"
+    },
+    {
+      "duration": 200.6,
+      "title": "Under Control",
+      "album": 55,
+      "artist": "Ellegarden",
+      "lyrics": null,
+      "path": "E:\\Music\\ELLEGARDEN\\2002 - My Own Destruction (EP)\\02 - Under Control.m4a"
+    },
+    {
+      "duration": 267.31,
+      "title": "右手",
+      "album": 55,
+      "artist": "Ellegarden",
+      "lyrics": null,
+      "path": "E:\\Music\\ELLEGARDEN\\2002 - My Own Destruction (EP)\\03 - 右手.m4a"
+    },
+    {
+      "duration": 182.69,
+      "title": "Mouse Molding",
+      "album": 55,
+      "artist": "Ellegarden",
+      "lyrics": null,
+      "path": "E:\\Music\\ELLEGARDEN\\2002 - My Own Destruction (EP)\\04 - Mouse Molding.m4a"
+    },
+    {
+      "duration": 237.53,
+      "title": "Jamie",
+      "album": 55,
+      "artist": "Ellegarden",
+      "lyrics": null,
+      "path": "E:\\Music\\ELLEGARDEN\\2002 - My Own Destruction (EP)\\05 - Lamie.m4a"
+    },
+    {
+      "duration": 250.64,
+      "title": "おやすみ",
+      "album": 55,
+      "artist": "Ellegarden",
+      "lyrics": null,
+      "path": "E:\\Music\\ELLEGARDEN\\2002 - My Own Destruction (EP)\\06 - おやすみ.m4a"
     }
   ],
   "albums": [
@@ -17089,7 +17137,8 @@
       ],
       "genre": null,
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 0
     },
     {
       "name": "The Young And The Hopeless",
@@ -17154,7 +17203,8 @@
       ],
       "genre": "Pop Rock",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 1
     },
     {
       "name": "Go",
@@ -17211,7 +17261,8 @@
       ],
       "genre": "Hardcore Punk",
       "year": 0,
-      "cover": "media\\00a2404c-5e75-460a-ad4c-6ba72bf2aacb.jpg"
+      "cover": "media\\00a2404c-5e75-460a-ad4c-6ba72bf2aacb.jpg",
+      "id": 2
     },
     {
       "name": "Triple Baka - Single",
@@ -17224,7 +17275,8 @@
       ],
       "genre": "J-Pop",
       "year": 2009,
-      "cover": "media\\e5d048a7-aa23-4f76-adf5-b83598e60958.jpg"
+      "cover": "media\\e5d048a7-aa23-4f76-adf5-b83598e60958.jpg",
+      "id": 3
     },
     {
       "name": "Del Vista Boca",
@@ -17253,7 +17305,8 @@
       ],
       "genre": null,
       "year": 2021,
-      "cover": "media\\d5d924b4-eb0c-4092-9d29-263dffbcd0fb.jpg"
+      "cover": "media\\d5d924b4-eb0c-4092-9d29-263dffbcd0fb.jpg",
+      "id": 4
     },
     {
       "name": "The Black Parade",
@@ -17318,7 +17371,8 @@
       ],
       "genre": "Rock",
       "year": 0,
-      "cover": "media\\5890d8ce-baba-4949-bd99-03987a6cab80.jpg"
+      "cover": "media\\5890d8ce-baba-4949-bd99-03987a6cab80.jpg",
+      "id": 5
     },
     {
       "name": "Cavetown",
@@ -17331,7 +17385,8 @@
       ],
       "genre": "Bedroom Pop",
       "year": 2015,
-      "cover": "media\\7596a1af-1331-42d2-9796-3cf28500feb7.jpg"
+      "cover": "media\\7596a1af-1331-42d2-9796-3cf28500feb7.jpg",
+      "id": 6
     },
     {
       "name": "Lemon Boy",
@@ -17344,7 +17399,8 @@
       ],
       "genre": "Bedroom Pop",
       "year": 2018,
-      "cover": "media\\f29145e2-692a-48b1-baf0-5d4c4801cd5d.jpg"
+      "cover": "media\\f29145e2-692a-48b1-baf0-5d4c4801cd5d.jpg",
+      "id": 7
     },
     {
       "name": "Knee Deep at ATP",
@@ -17357,7 +17413,8 @@
       ],
       "genre": "Pixel",
       "year": 2021,
-      "cover": "media\\39c86055-5e27-44fc-ba59-e1f509104365.jpg"
+      "cover": "media\\39c86055-5e27-44fc-ba59-e1f509104365.jpg",
+      "id": 8
     },
     {
       "name": "The Family Jewels",
@@ -17370,7 +17427,8 @@
       ],
       "genre": "Metropopolis",
       "year": 2010,
-      "cover": "media\\d42e11c8-761e-4382-b8ab-fe87eed737bf.jpg"
+      "cover": "media\\d42e11c8-761e-4382-b8ab-fe87eed737bf.jpg",
+      "id": 9
     },
     {
       "name": "Electra Heart (Deluxe)",
@@ -17383,7 +17441,8 @@
       ],
       "genre": "Metropopolis",
       "year": 2012,
-      "cover": "media\\2f15a9c8-1cab-4a71-8ccf-c1d09fd78035.jpg"
+      "cover": "media\\2f15a9c8-1cab-4a71-8ccf-c1d09fd78035.jpg",
+      "id": 10
     },
     {
       "name": "PORTALS",
@@ -17396,7 +17455,8 @@
       ],
       "genre": "Alt Z",
       "year": 2023,
-      "cover": "media\\dedfad4d-20c6-4228-9c3e-e909aa3b1772.jpg"
+      "cover": "media\\dedfad4d-20c6-4228-9c3e-e909aa3b1772.jpg",
+      "id": 11
     },
     {
       "name": "Bury Me At Makeout Creek",
@@ -17413,7 +17473,8 @@
       ],
       "genre": "Brooklyn Indie",
       "year": 2014,
-      "cover": "media\\b863eb85-f0fd-41dc-b83e-51f5f276b99a.jpg"
+      "cover": "media\\b863eb85-f0fd-41dc-b83e-51f5f276b99a.jpg",
+      "id": 12
     },
     {
       "name": "Be the Cowboy",
@@ -17430,7 +17491,8 @@
       ],
       "genre": "Brooklyn Indie",
       "year": 2018,
-      "cover": "media\\db2f8652-e535-49be-98d0-5507db702d87.jpg"
+      "cover": "media\\db2f8652-e535-49be-98d0-5507db702d87.jpg",
+      "id": 13
     },
     {
       "name": "The Land Is Inhospitable and So Are We",
@@ -17443,7 +17505,8 @@
       ],
       "genre": "Brooklyn Indie",
       "year": 2023,
-      "cover": "media\\6a395970-4821-4080-8152-e29465ccc89d.jpg"
+      "cover": "media\\6a395970-4821-4080-8152-e29465ccc89d.jpg",
+      "id": 14
     },
     {
       "name": "O My Heart",
@@ -17456,7 +17519,8 @@
       ],
       "genre": "vancouver indie",
       "year": 2008,
-      "cover": "media\\90348659-4591-4f6f-b129-6ef72a563696.jpg"
+      "cover": "media\\90348659-4591-4f6f-b129-6ef72a563696.jpg",
+      "id": 15
     },
     {
       "name": "#BrooklynBloodPop!",
@@ -17469,7 +17533,8 @@
       ],
       "genre": "glitchcore",
       "year": 2020,
-      "cover": "media\\6becaec6-156a-4932-8adb-12581c7f2e3f.jpg"
+      "cover": "media\\6becaec6-156a-4932-8adb-12581c7f2e3f.jpg",
+      "id": 16
     },
     {
       "name": "Notion",
@@ -17482,7 +17547,8 @@
       ],
       "genre": "La Indie",
       "year": 2021,
-      "cover": "media\\ba0fa01a-c5dc-4bb9-8b50-dabca8efbf0b.jpg"
+      "cover": "media\\ba0fa01a-c5dc-4bb9-8b50-dabca8efbf0b.jpg",
+      "id": 17
     },
     {
       "name": "Your City Gave Me Asthma",
@@ -17495,7 +17561,8 @@
       ],
       "genre": "Pixel",
       "year": 2020,
-      "cover": "media\\c971c131-21b5-4f30-9b4a-d3ea9a034b84.jpg"
+      "cover": "media\\c971c131-21b5-4f30-9b4a-d3ea9a034b84.jpg",
+      "id": 18
     },
     {
       "name": "Soft Boy",
@@ -17508,7 +17575,8 @@
       ],
       "genre": "Pixel",
       "year": 2022,
-      "cover": "media\\3e90f367-ec98-48a0-9dc3-233b863be975.jpg"
+      "cover": "media\\3e90f367-ec98-48a0-9dc3-233b863be975.jpg",
+      "id": 19
     },
     {
       "name": "Music (30th Anniversary Expanded Edition)",
@@ -17589,7 +17657,8 @@
       ],
       "genre": "Rock",
       "year": 2023,
-      "cover": "media\\747dbbde-b929-4d33-9cbe-c47b04a002d3.jpg"
+      "cover": "media\\747dbbde-b929-4d33-9cbe-c47b04a002d3.jpg",
+      "id": 20
     },
     {
       "name": "Grassroots (30th Anniversary Edition)",
@@ -17674,7 +17743,8 @@
       ],
       "genre": "Alternative",
       "year": 2024,
-      "cover": "media\\70412c9d-2ec2-4b7f-b212-8cab0d203296.jpg"
+      "cover": "media\\70412c9d-2ec2-4b7f-b212-8cab0d203296.jpg",
+      "id": 21
     },
     {
       "name": "311",
@@ -17739,7 +17809,8 @@
       ],
       "genre": null,
       "year": 1995,
-      "cover": "media\\0fa1ead5-6ffc-4fc7-9d90-e38c2c18f5a8.jpg"
+      "cover": "media\\0fa1ead5-6ffc-4fc7-9d90-e38c2c18f5a8.jpg",
+      "id": 22
     },
     {
       "name": "Transistor",
@@ -17832,7 +17903,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 1997,
-      "cover": "media\\c7fb4c21-bce1-443f-9cc0-3157d44549ec.png"
+      "cover": "media\\c7fb4c21-bce1-443f-9cc0-3157d44549ec.png",
+      "id": 23
     },
     {
       "name": "Soundsystem",
@@ -17893,7 +17965,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 1999,
-      "cover": "media\\885a0ef0-f704-49da-af92-1260d8e01ca0.jpg"
+      "cover": "media\\885a0ef0-f704-49da-af92-1260d8e01ca0.jpg",
+      "id": 24
     },
     {
       "name": "From Chaos",
@@ -17950,7 +18023,8 @@
       ],
       "genre": "Rock",
       "year": 2001,
-      "cover": "media\\607f6ae1-023a-43a2-a1ab-2a71ca5fff6c.png"
+      "cover": "media\\607f6ae1-023a-43a2-a1ab-2a71ca5fff6c.png",
+      "id": 25
     },
     {
       "name": "Uplifter",
@@ -18007,7 +18081,8 @@
       ],
       "genre": null,
       "year": 2009,
-      "cover": "media\\d7939377-c9f2-444f-97f4-3e4fa577336a.jpg"
+      "cover": "media\\d7939377-c9f2-444f-97f4-3e4fa577336a.jpg",
+      "id": 26
     },
     {
       "name": "Universal Pulse",
@@ -18048,7 +18123,8 @@
       ],
       "genre": null,
       "year": 2011,
-      "cover": "media\\b18d55af-12f3-473e-8615-fc1e23893761.jpg"
+      "cover": "media\\b18d55af-12f3-473e-8615-fc1e23893761.jpg",
+      "id": 27
     },
     {
       "name": "Dead Ends and Girlfriends",
@@ -18121,7 +18197,8 @@
       ],
       "genre": "Punk",
       "year": 1999,
-      "cover": "media\\9ff0ae08-dbe1-4aeb-977b-fae0584a9a14.jpg"
+      "cover": "media\\9ff0ae08-dbe1-4aeb-977b-fae0584a9a14.jpg",
+      "id": 28
     },
     {
       "name": "Last Stop Suburbia",
@@ -18214,7 +18291,8 @@
       ],
       "genre": null,
       "year": 2002,
-      "cover": "media\\f748ee51-d10a-4200-bd57-14e38620642f.jpg"
+      "cover": "media\\f748ee51-d10a-4200-bd57-14e38620642f.jpg",
+      "id": 29
     },
     {
       "name": "Before The Blackout",
@@ -18279,7 +18357,8 @@
       ],
       "genre": "Punk Rock",
       "year": 2005,
-      "cover": null
+      "cover": null,
+      "id": 30
     },
     {
       "name": "Before the Blackout",
@@ -18292,7 +18371,8 @@
       ],
       "genre": null,
       "year": 2005,
-      "cover": "media\\57b10b8b-acc7-4dc8-956f-92b1635e63a8.jpg"
+      "cover": "media\\57b10b8b-acc7-4dc8-956f-92b1635e63a8.jpg",
+      "id": 31
     },
     {
       "name": "Guilty Pleasures",
@@ -18333,7 +18413,8 @@
       ],
       "genre": "Pop-Punk",
       "year": 2006,
-      "cover": "media\\024feca2-f1f9-4bc0-861a-40adf5267efe.jpg"
+      "cover": "media\\024feca2-f1f9-4bc0-861a-40adf5267efe.jpg",
+      "id": 32
     },
     {
       "name": "Countdown to Nowhere",
@@ -18394,7 +18475,8 @@
       ],
       "genre": "Pop-Punk",
       "year": 2010,
-      "cover": "media\\a70f01ce-7416-4ab3-a1fa-039a89c02d64.jpg"
+      "cover": "media\\a70f01ce-7416-4ab3-a1fa-039a89c02d64.jpg",
+      "id": 33
     },
     {
       "name": "Life Behind Machines",
@@ -18451,7 +18533,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2012,
-      "cover": "media\\1ee0b996-87b9-474e-a5cb-68fc208fd50e.jpg"
+      "cover": "media\\1ee0b996-87b9-474e-a5cb-68fc208fd50e.jpg",
+      "id": 34
     },
     {
       "name": "Best Of... 20 Years & Counting",
@@ -18540,7 +18623,8 @@
       ],
       "genre": "Punk",
       "year": 2019,
-      "cover": "media\\aede6b1f-e812-43bf-8a1a-79764effcc7a.png"
+      "cover": "media\\aede6b1f-e812-43bf-8a1a-79764effcc7a.png",
+      "id": 35
     },
     {
       "name": "A Tribute To Alkaline Trio (Pacific Ridge Records)",
@@ -18553,7 +18637,8 @@
       ],
       "genre": "Punk ",
       "year": 2011,
-      "cover": null
+      "cover": null,
+      "id": 36
     },
     {
       "name": "Sleepover Soundtrack",
@@ -18570,7 +18655,8 @@
       ],
       "genre": null,
       "year": 0,
-      "cover": "media\\9efe4f9b-ac4d-4b8d-acd2-2e3c3e8daa54.jpg"
+      "cover": "media\\9efe4f9b-ac4d-4b8d-acd2-2e3c3e8daa54.jpg",
+      "id": 37
     },
     {
       "name": "Die for the Government",
@@ -18647,7 +18733,8 @@
       ],
       "genre": null,
       "year": 0,
-      "cover": "media\\061f54f0-5aa0-4e84-ae60-f37795b84298.png"
+      "cover": "media\\061f54f0-5aa0-4e84-ae60-f37795b84298.png",
+      "id": 38
     },
     {
       "name": "For Blood And Empire",
@@ -18712,7 +18799,8 @@
       ],
       "genre": "Punk",
       "year": 2006,
-      "cover": "media\\287cf96f-2f1b-44d8-b20f-bfdb873c93dd.jpg"
+      "cover": "media\\287cf96f-2f1b-44d8-b20f-bfdb873c93dd.jpg",
+      "id": 39
     },
     {
       "name": "Patches in Time",
@@ -18749,7 +18837,8 @@
       ],
       "genre": null,
       "year": 2001,
-      "cover": null
+      "cover": null,
+      "id": 40
     },
     {
       "name": "Broadcasting to the Nations",
@@ -18810,7 +18899,8 @@
       ],
       "genre": "Reggae",
       "year": 2017,
-      "cover": "media\\ffaf19b8-b9c2-4e5e-8f49-8ee642b3d786.jpg"
+      "cover": "media\\ffaf19b8-b9c2-4e5e-8f49-8ee642b3d786.jpg",
+      "id": 41
     },
     {
       "name": "All Ages",
@@ -18907,7 +18997,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": "media\\7b07bf2d-7f77-4c81-ac32-3703476210fa.jpg"
+      "cover": "media\\7b07bf2d-7f77-4c81-ac32-3703476210fa.jpg",
+      "id": 42
     },
     {
       "name": "Black Blossom (Self-Titled)",
@@ -18960,7 +19051,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2024,
-      "cover": "media\\99115fff-b048-4deb-8d1c-0cf2ab08623c.png"
+      "cover": "media\\99115fff-b048-4deb-8d1c-0cf2ab08623c.png",
+      "id": 43
     },
     {
       "name": "Dude Ranch",
@@ -19029,7 +19121,8 @@
       ],
       "genre": "Punk",
       "year": 1997,
-      "cover": null
+      "cover": null,
+      "id": 44
     },
     {
       "name": "Enema of the State",
@@ -19086,7 +19179,8 @@
       ],
       "genre": "Punk Rock",
       "year": 1999,
-      "cover": "media\\49622ffe-072a-42ae-aa1e-fefd24a66dec.jpg"
+      "cover": "media\\49622ffe-072a-42ae-aa1e-fefd24a66dec.jpg",
+      "id": 45
     },
     {
       "name": "The Mark, Tom, and Travis Show (The Enema Strikes Back!)",
@@ -19291,7 +19385,8 @@
       ],
       "genre": "Alternative Punk",
       "year": 2000,
-      "cover": "media\\45fc8371-5f87-4dd2-84cb-7991ca64b239.png"
+      "cover": "media\\45fc8371-5f87-4dd2-84cb-7991ca64b239.png",
+      "id": 46
     },
     {
       "name": "Take Off Your Pants and Jacket",
@@ -19352,7 +19447,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2001,
-      "cover": "media\\9bd1b0ca-8b8e-47b3-9e24-278ce03b5ac2.jpg"
+      "cover": "media\\9bd1b0ca-8b8e-47b3-9e24-278ce03b5ac2.jpg",
+      "id": 47
     },
     {
       "name": "Drunk Enough To Dance",
@@ -19441,7 +19537,8 @@
       ],
       "genre": "Punk Rock",
       "year": 2002,
-      "cover": "media\\967b1d61-1b65-492e-a5c2-9b4868c47d63.png"
+      "cover": "media\\967b1d61-1b65-492e-a5c2-9b4868c47d63.png",
+      "id": 48
     },
     {
       "name": "A Hangover You Don’t Deserve",
@@ -19526,7 +19623,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 2004,
-      "cover": "media\\09a20895-2d8f-43c5-9a25-118192e85de8.jpg"
+      "cover": "media\\09a20895-2d8f-43c5-9a25-118192e85de8.jpg",
+      "id": 49
     },
     {
       "name": "Authorized Greatest Hits",
@@ -19599,7 +19697,8 @@
       ],
       "genre": "Rock",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 50
     },
     {
       "name": "Lockjaw",
@@ -19664,7 +19763,8 @@
       ],
       "genre": "Rock",
       "year": 1995,
-      "cover": "media\\397e2e8e-99f8-4d65-aa7f-30bb8b97a285.png"
+      "cover": "media\\397e2e8e-99f8-4d65-aa7f-30bb8b97a285.png",
+      "id": 51
     },
     {
       "name": "Milo Goes to College",
@@ -19733,7 +19833,8 @@
       ],
       "genre": null,
       "year": 1982,
-      "cover": "media\\02c86a71-99a2-4f54-a556-05d5dbf13db7.jpg"
+      "cover": "media\\02c86a71-99a2-4f54-a556-05d5dbf13db7.jpg",
+      "id": 52
     },
     {
       "name": "Hell Freezes Over",
@@ -19802,7 +19903,8 @@
       ],
       "genre": "Rock",
       "year": 2005,
-      "cover": null
+      "cover": null,
+      "id": 53
     },
     {
       "name": "Don't Trust Anyone But Us",
@@ -19859,7 +19961,8 @@
       ],
       "genre": null,
       "year": 2002,
-      "cover": "media\\87310a3a-a54c-4951-b770-bcbbcbd51af8.jpg"
+      "cover": "media\\87310a3a-a54c-4951-b770-bcbbcbd51af8.jpg",
+      "id": 54
     },
     {
       "name": "My Own Destruction",
@@ -19888,11 +19991,36 @@
         [
           6,
           573
+        ],
+        [
+          1,
+          2131
+        ],
+        [
+          2,
+          2132
+        ],
+        [
+          3,
+          2133
+        ],
+        [
+          4,
+          2134
+        ],
+        [
+          5,
+          2135
+        ],
+        [
+          6,
+          2136
         ]
       ],
       "genre": null,
       "year": 2002,
-      "cover": "media\\ec26fa6b-8862-4a21-a3ac-87cb99bb79f5.jpg"
+      "cover": "media\\ec26fa6b-8862-4a21-a3ac-87cb99bb79f5.jpg",
+      "id": 55
     },
     {
       "name": "Bring Your Board!!",
@@ -19945,7 +20073,8 @@
       ],
       "genre": null,
       "year": 2003,
-      "cover": "media\\6b340a41-3c37-413a-8c9c-b31f081b4119.png"
+      "cover": "media\\6b340a41-3c37-413a-8c9c-b31f081b4119.png",
+      "id": 56
     },
     {
       "name": "Pepperoni Quattro",
@@ -19994,7 +20123,8 @@
       ],
       "genre": "Rock",
       "year": 2004,
-      "cover": "media\\d241cd10-f529-48a8-9399-3ede2b10ace4.png"
+      "cover": "media\\d241cd10-f529-48a8-9399-3ede2b10ace4.png",
+      "id": 57
     },
     {
       "name": "Riot On The Grill",
@@ -20043,7 +20173,8 @@
       ],
       "genre": null,
       "year": 2005,
-      "cover": null
+      "cover": null,
+      "id": 58
     },
     {
       "name": "Eleven Fire Crackers",
@@ -20096,7 +20227,8 @@
       ],
       "genre": null,
       "year": 2006,
-      "cover": "media\\85e62cef-df20-4dfb-a403-b619155762e3.png"
+      "cover": "media\\85e62cef-df20-4dfb-a403-b619155762e3.png",
+      "id": 59
     },
     {
       "name": "Salamander",
@@ -20117,7 +20249,8 @@
       ],
       "genre": null,
       "year": 2006,
-      "cover": null
+      "cover": null,
+      "id": 60
     },
     {
       "name": "Figureheads Compilation",
@@ -20162,7 +20295,8 @@
       ],
       "genre": "J-Pop",
       "year": 2007,
-      "cover": "media\\d396a57a-8cf0-4635-89d1-02d05b634f23.jpg"
+      "cover": "media\\d396a57a-8cf0-4635-89d1-02d05b634f23.jpg",
+      "id": 61
     },
     {
       "name": "The End of Yesterday",
@@ -20215,7 +20349,8 @@
       ],
       "genre": null,
       "year": 2022,
-      "cover": "media\\67032dfc-dccd-46e6-90f5-653b7945c709.bmp"
+      "cover": "media\\67032dfc-dccd-46e6-90f5-653b7945c709.bmp",
+      "id": 62
     },
     {
       "name": "From Under the Cork Tree",
@@ -20276,7 +20411,8 @@
       ],
       "genre": "Rock",
       "year": 0,
-      "cover": "media\\46b80ec7-76ad-4b8a-939c-64595c67a0b0.jpg"
+      "cover": "media\\46b80ec7-76ad-4b8a-939c-64595c67a0b0.jpg",
+      "id": 63
     },
     {
       "name": "Fenix TX",
@@ -20337,7 +20473,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\0e6c7cfc-8c5d-424b-ba6a-cf0c0da13cb1.jpg"
+      "cover": "media\\0e6c7cfc-8c5d-424b-ba6a-cf0c0da13cb1.jpg",
+      "id": 64
     },
     {
       "name": "Lechuza",
@@ -20394,7 +20531,8 @@
       ],
       "genre": "Punk Rock",
       "year": 2001,
-      "cover": "media\\e710d78d-407a-4862-b8c3-53557eda5576.jpg"
+      "cover": "media\\e710d78d-407a-4862-b8c3-53557eda5576.jpg",
+      "id": 65
     },
     {
       "name": "Our Newest Album Ever!",
@@ -20455,7 +20593,8 @@
       ],
       "genre": null,
       "year": 1997,
-      "cover": null
+      "cover": null,
+      "id": 66
     },
     {
       "name": "Proof That the Youth Are Revolting",
@@ -20536,7 +20675,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 67
     },
     {
       "name": "Stop Drop And Roll!!!",
@@ -20597,7 +20737,8 @@
       ],
       "genre": "Alternative",
       "year": 2008,
-      "cover": "media\\83c71382-0a34-494c-9ce0-fe57ca88d14f.jpg"
+      "cover": "media\\83c71382-0a34-494c-9ce0-fe57ca88d14f.jpg",
+      "id": 68
     },
     {
       "name": "Goldfinger",
@@ -20670,7 +20811,8 @@
       ],
       "genre": "Pop Punk",
       "year": 1996,
-      "cover": "media\\d6c7e23b-5fda-490d-a4f5-a2746bd15bbf.jpg"
+      "cover": "media\\d6c7e23b-5fda-490d-a4f5-a2746bd15bbf.jpg",
+      "id": 69
     },
     {
       "name": "Hang-Ups",
@@ -20731,7 +20873,8 @@
       ],
       "genre": "Ska",
       "year": 1998,
-      "cover": "media\\c7291594-f0e5-4e3e-885f-bfadb5ab6b83.jpg"
+      "cover": "media\\c7291594-f0e5-4e3e-885f-bfadb5ab6b83.jpg",
+      "id": 70
     },
     {
       "name": "Stomping Ground",
@@ -20796,7 +20939,8 @@
       ],
       "genre": "Punk",
       "year": 2000,
-      "cover": "media\\818544a9-044d-4606-8eff-3f633d9a83b6.jpg"
+      "cover": "media\\818544a9-044d-4606-8eff-3f633d9a83b6.jpg",
+      "id": 71
     },
     {
       "name": "Open Your Eyes",
@@ -20873,7 +21017,8 @@
       ],
       "genre": "Rock",
       "year": 0,
-      "cover": "media\\755d8f82-8858-4070-84c8-59bf7bcb393c.jpg"
+      "cover": "media\\755d8f82-8858-4070-84c8-59bf7bcb393c.jpg",
+      "id": 72
     },
     {
       "name": "Disconnection Notice",
@@ -20930,7 +21075,8 @@
       ],
       "genre": "Punk Rock",
       "year": 0,
-      "cover": "media\\995790c5-2650-4688-a179-c7bb7823d7a6.jpg"
+      "cover": "media\\995790c5-2650-4688-a179-c7bb7823d7a6.jpg",
+      "id": 73
     },
     {
       "name": "The Knife",
@@ -20991,7 +21137,8 @@
       ],
       "genre": "Punk",
       "year": 2017,
-      "cover": "media\\1e55fb84-c8cb-4056-8ccd-f9747b4448e8.jpg"
+      "cover": "media\\1e55fb84-c8cb-4056-8ccd-f9747b4448e8.jpg",
+      "id": 74
     },
     {
       "name": "Kiss The World",
@@ -21052,7 +21199,8 @@
       ],
       "genre": "Punk",
       "year": 2007,
-      "cover": "media\\13e0033a-1f67-4a0c-8d87-a2f0876b24c8.png"
+      "cover": "media\\13e0033a-1f67-4a0c-8d87-a2f0876b24c8.png",
+      "id": 75
     },
     {
       "name": "Second City Showdown (Split EP)",
@@ -21073,7 +21221,8 @@
       ],
       "genre": "Punk Rock",
       "year": 2010,
-      "cover": "media\\d50cb04c-4dca-47a4-8954-c50329c6f645.jpg"
+      "cover": "media\\d50cb04c-4dca-47a4-8954-c50329c6f645.jpg",
+      "id": 76
     },
     {
       "name": "Second City Showdown (Split EP)",
@@ -21094,7 +21243,8 @@
       ],
       "genre": "Punk Rock",
       "year": 2010,
-      "cover": "media\\a810a327-48b5-4664-921b-3c0a895ff610.jpg"
+      "cover": "media\\a810a327-48b5-4664-921b-3c0a895ff610.jpg",
+      "id": 77
     },
     {
       "name": "1,039/Smoothed Out Slappy Hours",
@@ -21179,7 +21329,8 @@
       ],
       "genre": "Punk Rock",
       "year": 0,
-      "cover": "media\\e5dad788-0d7f-435f-ac3e-0970688f117a.jpg"
+      "cover": "media\\e5dad788-0d7f-435f-ac3e-0970688f117a.jpg",
+      "id": 78
     },
     {
       "name": "Kerplunk!",
@@ -21252,7 +21403,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\b6db14fb-34e1-4ec1-9e4b-8d8728142217.jpg"
+      "cover": "media\\b6db14fb-34e1-4ec1-9e4b-8d8728142217.jpg",
+      "id": 79
     },
     {
       "name": "Dookie",
@@ -21317,7 +21469,8 @@
       ],
       "genre": "Punk",
       "year": 1994,
-      "cover": null
+      "cover": null,
+      "id": 80
     },
     {
       "name": "Insomniac",
@@ -21382,7 +21535,8 @@
       ],
       "genre": "Punk",
       "year": 1995,
-      "cover": null
+      "cover": null,
+      "id": 81
     },
     {
       "name": "Foot In Mouth (Live)",
@@ -21435,7 +21589,8 @@
       ],
       "genre": "Punk",
       "year": 1997,
-      "cover": null
+      "cover": null,
+      "id": 82
     },
     {
       "name": "Nimrod.",
@@ -21516,7 +21671,8 @@
       ],
       "genre": "Punk",
       "year": 1997,
-      "cover": "media\\44b0000d-6ed9-4bf1-ae57-4463262f65e6.png"
+      "cover": "media\\44b0000d-6ed9-4bf1-ae57-4463262f65e6.png",
+      "id": 83
     },
     {
       "name": "Warning",
@@ -21573,7 +21729,8 @@
       ],
       "genre": "Rock",
       "year": 2000,
-      "cover": "media\\ca6ba603-1fcb-459f-b893-452406d883e8.png"
+      "cover": "media\\ca6ba603-1fcb-459f-b893-452406d883e8.png",
+      "id": 84
     },
     {
       "name": "International Superhits",
@@ -21594,7 +21751,8 @@
       ],
       "genre": "Rock",
       "year": 2001,
-      "cover": "media\\b129c1b9-74a3-4a2b-baeb-fd6cbe2f6f1b.jpg"
+      "cover": "media\\b129c1b9-74a3-4a2b-baeb-fd6cbe2f6f1b.jpg",
+      "id": 85
     },
     {
       "name": "American Idiot",
@@ -21655,7 +21813,8 @@
       ],
       "genre": "Punk",
       "year": 2004,
-      "cover": null
+      "cover": null,
+      "id": 86
     },
     {
       "name": "21st Century Breakdown",
@@ -21736,7 +21895,8 @@
       ],
       "genre": "Rock",
       "year": 2009,
-      "cover": "media\\4ea15b69-6caf-4256-8f01-9322557a8a96.jpg"
+      "cover": "media\\4ea15b69-6caf-4256-8f01-9322557a8a96.jpg",
+      "id": 87
     },
     {
       "name": "Know Your Enemy",
@@ -21757,7 +21917,8 @@
       ],
       "genre": "Alternative",
       "year": 2009,
-      "cover": "media\\ddb0dd69-db44-4a25-9e3f-a0854594fc84.jpg"
+      "cover": "media\\ddb0dd69-db44-4a25-9e3f-a0854594fc84.jpg",
+      "id": 88
     },
     {
       "name": "Revolution Radio",
@@ -21814,7 +21975,8 @@
       ],
       "genre": "Alternative",
       "year": 0,
-      "cover": "media\\7ded3fc1-1327-486f-a425-04c0f01af81b.jpg"
+      "cover": "media\\7ded3fc1-1327-486f-a425-04c0f01af81b.jpg",
+      "id": 89
     },
     {
       "name": "Saviors",
@@ -21883,7 +22045,8 @@
       ],
       "genre": "Punk Rock",
       "year": 2024,
-      "cover": "media\\d9c90b34-f5b0-47e7-852e-71ca8fe6b8e2.jpg"
+      "cover": "media\\d9c90b34-f5b0-47e7-852e-71ca8fe6b8e2.jpg",
+      "id": 90
     },
     {
       "name": "Appetite For Destruction",
@@ -21940,7 +22103,8 @@
       ],
       "genre": "Hard Rock",
       "year": 1987,
-      "cover": "media\\c390cf1f-c834-4122-b790-62a14f8477a6.jpg"
+      "cover": "media\\c390cf1f-c834-4122-b790-62a14f8477a6.jpg",
+      "id": 91
     },
     {
       "name": "Act Your Age",
@@ -22009,7 +22173,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\63e34357-1689-4236-8089-b44ecfb24441.png"
+      "cover": "media\\63e34357-1689-4236-8089-b44ecfb24441.png",
+      "id": 92
     },
     {
       "name": "Losing Streak",
@@ -22082,7 +22247,8 @@
       ],
       "genre": "Alternative",
       "year": 1996,
-      "cover": "media\\291ee263-64e5-4462-8999-c09a2892def5.jpg"
+      "cover": "media\\291ee263-64e5-4462-8999-c09a2892def5.jpg",
+      "id": 93
     },
     {
       "name": "Pezcore",
@@ -22167,7 +22333,8 @@
       ],
       "genre": "Alternative",
       "year": 1995,
-      "cover": null
+      "cover": null,
+      "id": 94
     },
     {
       "name": "Hello Rockview",
@@ -22232,7 +22399,8 @@
       ],
       "genre": "Ska",
       "year": 1998,
-      "cover": "media\\1b92783f-e954-4a50-ab61-baaf12bf8af8.jpg"
+      "cover": "media\\1b92783f-e954-4a50-ab61-baaf12bf8af8.jpg",
+      "id": 95
     },
     {
       "name": "17 Reasons",
@@ -22305,7 +22473,8 @@
       ],
       "genre": "Ska",
       "year": 1996,
-      "cover": "media\\d4f67f4d-0dfa-4c29-b045-45b1c4c990d1.jpg"
+      "cover": "media\\d4f67f4d-0dfa-4c29-b045-45b1c4c990d1.jpg",
+      "id": 96
     },
     {
       "name": "Duck and Cover",
@@ -22362,7 +22531,8 @@
       ],
       "genre": null,
       "year": 1998,
-      "cover": "media\\713f503e-8579-4b70-a4b3-c4f6e2a918e1.jpg"
+      "cover": "media\\713f503e-8579-4b70-a4b3-c4f6e2a918e1.jpg",
+      "id": 97
     },
     {
       "name": "Just One More",
@@ -22431,7 +22601,8 @@
       ],
       "genre": "Ska",
       "year": 2003,
-      "cover": "media\\f044a89d-04a3-4d2b-b552-38d158504569.jpg"
+      "cover": "media\\f044a89d-04a3-4d2b-b552-38d158504569.jpg",
+      "id": 98
     },
     {
       "name": "Keep It Going",
@@ -22500,7 +22671,8 @@
       ],
       "genre": "Punk Rock",
       "year": 2005,
-      "cover": "media\\5df45ce7-f851-488d-bc2f-93891d5f1ac8.jpg"
+      "cover": "media\\5df45ce7-f851-488d-bc2f-93891d5f1ac8.jpg",
+      "id": 99
     },
     {
       "name": "Dirty Rice",
@@ -22557,7 +22729,8 @@
       ],
       "genre": "Ska",
       "year": 2014,
-      "cover": "media\\3b512578-a7e3-4233-9426-a63f13e78994.jpg"
+      "cover": "media\\3b512578-a7e3-4233-9426-a63f13e78994.jpg",
+      "id": 100
     },
     {
       "name": "Arrows Room 117",
@@ -22614,7 +22787,8 @@
       ],
       "genre": "Ska",
       "year": 2024,
-      "cover": "media\\20c9a90a-378b-48d9-9424-38fb9046279b.jpg"
+      "cover": "media\\20c9a90a-378b-48d9-9424-38fb9046279b.jpg",
+      "id": 101
     },
     {
       "name": "1.21 Gigawatts",
@@ -22643,7 +22817,8 @@
       ],
       "genre": "Punk",
       "year": 2008,
-      "cover": "media\\84ed6fe5-08d7-4ff2-9622-ee1f3b2087da.jpg"
+      "cover": "media\\84ed6fe5-08d7-4ff2-9622-ee1f3b2087da.jpg",
+      "id": 102
     },
     {
       "name": "You Know That New Sound You Are Looking For? Well Listen To This!",
@@ -22676,7 +22851,8 @@
       ],
       "genre": "Punk",
       "year": 2018,
-      "cover": "media\\64c7bc7e-be00-46eb-b094-1d8ea6cfd62c.png"
+      "cover": "media\\64c7bc7e-be00-46eb-b094-1d8ea6cfd62c.png",
+      "id": 103
     },
     {
       "name": "Wasting Time",
@@ -22741,7 +22917,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2000,
-      "cover": "media\\b38d4d15-1dd4-4df8-bad5-b0d53e850237.jpg"
+      "cover": "media\\b38d4d15-1dd4-4df8-bad5-b0d53e850237.jpg",
+      "id": 104
     },
     {
       "name": "Sampler",
@@ -22758,7 +22935,8 @@
       ],
       "genre": "Rock",
       "year": 2001,
-      "cover": null
+      "cover": null,
+      "id": 105
     },
     {
       "name": "The Racecar Phenomenon",
@@ -22775,7 +22953,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2021,
-      "cover": "media\\66c01272-1008-433c-ab01-62b4875d777d.jpg"
+      "cover": "media\\66c01272-1008-433c-ab01-62b4875d777d.jpg",
+      "id": 106
     },
     {
       "name": "For Monkeys",
@@ -22832,7 +23011,8 @@
       ],
       "genre": "Punk",
       "year": 1997,
-      "cover": "media\\8a4af649-0459-43e5-91cc-3cdb4c402ad3.jpg"
+      "cover": "media\\8a4af649-0459-43e5-91cc-3cdb4c402ad3.jpg",
+      "id": 107
     },
     {
       "name": "Pennybridge Pioneers",
@@ -22897,7 +23077,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": "media\\b8fd4fbc-7662-4f1b-b13f-947da613f43f.jpg"
+      "cover": "media\\b8fd4fbc-7662-4f1b-b13f-947da613f43f.jpg",
+      "id": 108
     },
     {
       "name": "Dim The Lights",
@@ -22950,7 +23131,8 @@
       ],
       "genre": "Indie / Alternative",
       "year": 2017,
-      "cover": "media\\2413410b-c1e4-4539-b645-55bb1574450e.jpg"
+      "cover": "media\\2413410b-c1e4-4539-b645-55bb1574450e.jpg",
+      "id": 109
     },
     {
       "name": "On the Cover",
@@ -22991,7 +23173,8 @@
       ],
       "genre": "Punk",
       "year": 1995,
-      "cover": "media\\8f725e87-1cf4-477e-8240-99a6e074358f.jpg"
+      "cover": "media\\8f725e87-1cf4-477e-8240-99a6e074358f.jpg",
+      "id": 110
     },
     {
       "name": "Slowly Going the Way of the Buffalo",
@@ -23064,7 +23247,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\f344a5d7-1bb4-4637-b6bb-195cffbdb131.png"
+      "cover": "media\\f344a5d7-1bb4-4637-b6bb-195cffbdb131.png",
+      "id": 111
     },
     {
       "name": "The Ever Passing Moment",
@@ -23133,7 +23317,8 @@
       ],
       "genre": null,
       "year": 0,
-      "cover": "media\\fbf510a0-d474-46df-bcac-22171822d53e.jpg"
+      "cover": "media\\fbf510a0-d474-46df-bcac-22171822d53e.jpg",
+      "id": 112
     },
     {
       "name": "Before Everything & After",
@@ -23206,7 +23391,8 @@
       ],
       "genre": "Punk",
       "year": 2003,
-      "cover": "media\\96fbae6e-0336-4da7-a8a8-9dfcf1bf9bec.jpg"
+      "cover": "media\\96fbae6e-0336-4da7-a8a8-9dfcf1bf9bec.jpg",
+      "id": 113
     },
     {
       "name": "Limited Edition",
@@ -23255,7 +23441,8 @@
       ],
       "genre": "Punk",
       "year": 2002,
-      "cover": null
+      "cover": null,
+      "id": 114
     },
     {
       "name": "Nothing Gold Can Stay",
@@ -23312,7 +23499,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\4fd04d1a-89bf-4630-8f55-176d9b3202f6.jpg"
+      "cover": "media\\4fd04d1a-89bf-4630-8f55-176d9b3202f6.jpg",
+      "id": 115
     },
     {
       "name": "From the Screen to Your Stereo",
@@ -23349,7 +23537,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\e483e636-c3ed-43fd-95c0-12e924c026f9.jpg"
+      "cover": "media\\e483e636-c3ed-43fd-95c0-12e924c026f9.jpg",
+      "id": 116
     },
     {
       "name": "New Found Glory",
@@ -23406,7 +23595,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\4adee80e-bdd8-45e1-b27c-f2d67d6a1ee8.jpg"
+      "cover": "media\\4adee80e-bdd8-45e1-b27c-f2d67d6a1ee8.jpg",
+      "id": 117
     },
     {
       "name": "From the Screen to Your Stereo Part II",
@@ -23459,7 +23649,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2007,
-      "cover": "media\\4ba3d112-9103-4d0f-8cef-a78bb56d65a2.jpg"
+      "cover": "media\\4ba3d112-9103-4d0f-8cef-a78bb56d65a2.jpg",
+      "id": 118
     },
     {
       "name": "Tragic Kingdom",
@@ -23524,7 +23715,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 1999,
-      "cover": "media\\c739c269-415f-4022-b094-8aa29a9d0c93.jpg"
+      "cover": "media\\c739c269-415f-4022-b094-8aa29a9d0c93.jpg",
+      "id": 119
     },
     {
       "name": "¡Leche con Carne!",
@@ -23581,7 +23773,8 @@
       ],
       "genre": "Hardcore Punk",
       "year": 0,
-      "cover": "media\\4cbc4f5f-01e3-475e-b498-3912fc49105f.png"
+      "cover": "media\\4cbc4f5f-01e3-475e-b498-3912fc49105f.png",
+      "id": 120
     },
     {
       "name": "Making Friends",
@@ -23638,7 +23831,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\c2c3aa51-64dd-4756-add1-72b50d3c3d1b.jpg"
+      "cover": "media\\c2c3aa51-64dd-4756-add1-72b50d3c3d1b.jpg",
+      "id": 121
     },
     {
       "name": "Hard Rock Bottom",
@@ -23699,7 +23893,8 @@
       ],
       "genre": "Rock",
       "year": 2002,
-      "cover": "media\\87d138e0-75ed-49ca-b76e-d7f395ce0c8d.jpg"
+      "cover": "media\\87d138e0-75ed-49ca-b76e-d7f395ce0c8d.jpg",
+      "id": 122
     },
     {
       "name": "Punk in Drublic",
@@ -23776,7 +23971,8 @@
       ],
       "genre": "Punk",
       "year": 1994,
-      "cover": "media\\6998b48c-1106-4080-a7ef-c34564a5db4d.jpg"
+      "cover": "media\\6998b48c-1106-4080-a7ef-c34564a5db4d.jpg",
+      "id": 123
     },
     {
       "name": "Pump Up the Valuum",
@@ -23841,7 +24037,8 @@
       ],
       "genre": "Rock",
       "year": 2000,
-      "cover": null
+      "cover": null,
+      "id": 124
     },
     {
       "name": "Here's to the Mourning",
@@ -23902,7 +24099,8 @@
       ],
       "genre": "Rock",
       "year": 0,
-      "cover": "media\\298554e4-3f3b-4735-94fb-0d6410c6d9d5.jpg"
+      "cover": "media\\298554e4-3f3b-4735-94fb-0d6410c6d9d5.jpg",
+      "id": 125
     },
     {
       "name": "The War on Errorism",
@@ -23967,7 +24165,8 @@
       ],
       "genre": "Ska/Punk",
       "year": 2003,
-      "cover": "media\\85abebfe-0cf5-447d-a02d-ada2d08d3efc.jpg"
+      "cover": "media\\85abebfe-0cf5-447d-a02d-ada2d08d3efc.jpg",
+      "id": 126
     },
     {
       "name": "(What’s the Story) Morning Glory?",
@@ -24024,7 +24223,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 2008,
-      "cover": "media\\26a67af9-b13e-444c-aa39-e0f68730e74d.png"
+      "cover": "media\\26a67af9-b13e-444c-aa39-e0f68730e74d.png",
+      "id": 127
     },
     {
       "name": "A Fever You Can’t Sweat Out",
@@ -24085,7 +24285,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 128
     },
     {
       "name": "Infest",
@@ -24138,7 +24339,8 @@
       ],
       "genre": "Alternative Metal",
       "year": 2000,
-      "cover": "media\\7ff88082-ac45-4c64-8414-b57cad552ba4.png"
+      "cover": "media\\7ff88082-ac45-4c64-8414-b57cad552ba4.png",
+      "id": 129
     },
     {
       "name": "RIOT!",
@@ -24191,7 +24393,8 @@
       ],
       "genre": "Rock",
       "year": 2007,
-      "cover": "media\\e78dfa6c-b06f-4a24-a422-23778d634473.jpg"
+      "cover": "media\\e78dfa6c-b06f-4a24-a422-23778d634473.jpg",
+      "id": 130
     },
     {
       "name": "7",
@@ -24252,7 +24455,8 @@
       ],
       "genre": "EDM",
       "year": 2023,
-      "cover": "media\\08ee7f51-566a-4ea5-af0a-424e035d78a2.png"
+      "cover": "media\\08ee7f51-566a-4ea5-af0a-424e035d78a2.png",
+      "id": 131
     },
     {
       "name": "V",
@@ -24309,7 +24513,8 @@
       ],
       "genre": null,
       "year": 2023,
-      "cover": "media\\25848cfc-eaa2-481b-afcc-c072266ffbbf.png"
+      "cover": "media\\25848cfc-eaa2-481b-afcc-c072266ffbbf.png",
+      "id": 132
     },
     {
       "name": "Jump Salty",
@@ -24366,7 +24571,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 133
     },
     {
       "name": "How to Clean Everything",
@@ -24451,7 +24657,8 @@
       ],
       "genre": null,
       "year": 2013,
-      "cover": "media\\aab46190-711e-42cf-b104-3f46152891d4.jpg"
+      "cover": "media\\aab46190-711e-42cf-b104-3f46152891d4.jpg",
+      "id": 134
     },
     {
       "name": "Arutokoroni no Teiri",
@@ -24464,7 +24671,8 @@
       ],
       "genre": null,
       "year": 2009,
-      "cover": "media\\a17a89f5-5565-427f-8316-2494a8e60d29.png"
+      "cover": "media\\a17a89f5-5565-427f-8316-2494a8e60d29.png",
+      "id": 135
     },
     {
       "name": "...And Out Come The Wolves",
@@ -24549,7 +24757,8 @@
       ],
       "genre": "Punk",
       "year": 1995,
-      "cover": "media\\d5eee745-624b-4440-a29e-2c5fdb7402a5.png"
+      "cover": "media\\d5eee745-624b-4440-a29e-2c5fdb7402a5.png",
+      "id": 136
     },
     {
       "name": "Life Won't Wait",
@@ -24646,7 +24855,8 @@
       ],
       "genre": "Punk",
       "year": 1998,
-      "cover": "media\\43a0eadf-7576-4407-aa84-b6763d93623d.png"
+      "cover": "media\\43a0eadf-7576-4407-aa84-b6763d93623d.png",
+      "id": 137
     },
     {
       "name": "Turn the Radio Off",
@@ -24719,7 +24929,8 @@
       ],
       "genre": "Rock",
       "year": 0,
-      "cover": "media\\7eef78e6-cf27-45ec-9c04-8224d95d31cc.jpg"
+      "cover": "media\\7eef78e6-cf27-45ec-9c04-8224d95d31cc.jpg",
+      "id": 138
     },
     {
       "name": "Monkeys for Nothin’ and the Chimps for Free",
@@ -24796,7 +25007,8 @@
       ],
       "genre": "Ska",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 139
     },
     {
       "name": "Candy Coated Fury",
@@ -24861,7 +25073,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": "media\\48e8ca8b-b271-4f35-8527-09effd467484.png"
+      "cover": "media\\48e8ca8b-b271-4f35-8527-09effd467484.png",
+      "id": 140
     },
     {
       "name": "スコット と リバース",
@@ -24918,7 +25131,8 @@
       ],
       "genre": null,
       "year": 2013,
-      "cover": "media\\1bee7d2e-013d-463d-b57d-f319bfdf4ea5.png"
+      "cover": "media\\1bee7d2e-013d-463d-b57d-f319bfdf4ea5.png",
+      "id": 141
     },
     {
       "name": "Showoff",
@@ -24975,7 +25189,8 @@
       ],
       "genre": "Pop Rock",
       "year": 1999,
-      "cover": null
+      "cover": null,
+      "id": 142
     },
     {
       "name": "Frogstomp",
@@ -25028,7 +25243,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 1995,
-      "cover": "media\\24790c6d-7d31-4636-8ec2-cac173f24a60.jpg"
+      "cover": "media\\24790c6d-7d31-4636-8ec2-cac173f24a60.jpg",
+      "id": 143
     },
     {
       "name": "Back to the Future: Music From the Motion Picture Soundtrack",
@@ -25077,7 +25293,8 @@
       ],
       "genre": "Synth-Pop",
       "year": 1985,
-      "cover": null
+      "cover": null,
+      "id": 144
     },
     {
       "name": "Seven Showers",
@@ -25114,7 +25331,8 @@
       ],
       "genre": null,
       "year": 2009,
-      "cover": "media\\4643f87b-e1bd-40b7-ac78-337a3cb5af78.png"
+      "cover": "media\\4643f87b-e1bd-40b7-ac78-337a3cb5af78.png",
+      "id": 145
     },
     {
       "name": "LOVE GOOD TIME",
@@ -25147,7 +25365,8 @@
       ],
       "genre": "J-Pop",
       "year": 2014,
-      "cover": "media\\5456b5d3-0023-4958-aa89-8407203d137e.png"
+      "cover": "media\\5456b5d3-0023-4958-aa89-8407203d137e.png",
+      "id": 146
     },
     {
       "name": "missa",
@@ -25216,7 +25435,8 @@
       ],
       "genre": "Japanese Pop Punk",
       "year": 2015,
-      "cover": "media\\21cd2ff4-73da-41dd-98c9-8557b32099e8.jpg"
+      "cover": "media\\21cd2ff4-73da-41dd-98c9-8557b32099e8.jpg",
+      "id": 147
     },
     {
       "name": "Anthem",
@@ -25273,7 +25493,8 @@
       ],
       "genre": "Punk",
       "year": 2017,
-      "cover": "media\\5bd24551-d411-4e26-b164-a60186fe682b.png"
+      "cover": "media\\5bd24551-d411-4e26-b164-a60186fe682b.png",
+      "id": 148
     },
     {
       "name": "SUNCTUARY",
@@ -25326,7 +25547,8 @@
       ],
       "genre": "J-Rock",
       "year": 2020,
-      "cover": "media\\75090534-dba1-4cfb-bceb-c179418cbed5.jpg"
+      "cover": "media\\75090534-dba1-4cfb-bceb-c179418cbed5.jpg",
+      "id": 149
     },
     {
       "name": "PUNK RECORDS",
@@ -25387,7 +25609,8 @@
       ],
       "genre": "Rock",
       "year": 2024,
-      "cover": "media\\da7b4ce0-91b1-415a-ba44-653e119af74e.jpg"
+      "cover": "media\\da7b4ce0-91b1-415a-ba44-653e119af74e.jpg",
+      "id": 150
     },
     {
       "name": "Seven Colors",
@@ -25424,7 +25647,8 @@
       ],
       "genre": "Power Pop",
       "year": 2008,
-      "cover": "media\\7a78614c-f3a6-4d4a-ab0f-da7f89d4a1ec.jpg"
+      "cover": "media\\7a78614c-f3a6-4d4a-ab0f-da7f89d4a1ec.jpg",
+      "id": 151
     },
     {
       "name": "SEVEN LOVERS",
@@ -25501,7 +25725,8 @@
       ],
       "genre": "Punk",
       "year": 2011,
-      "cover": "media\\e767e27f-5786-410f-97e4-98e0967a286e.jpg"
+      "cover": "media\\e767e27f-5786-410f-97e4-98e0967a286e.jpg",
+      "id": 152
     },
     {
       "name": "Spray Paint Heroes",
@@ -25534,7 +25759,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 153
     },
     {
       "name": "Everything Goes Numb",
@@ -25591,7 +25817,8 @@
       ],
       "genre": "Alternative",
       "year": 2003,
-      "cover": null
+      "cover": null,
+      "id": 154
     },
     {
       "name": "Greatest Hits",
@@ -25636,7 +25863,8 @@
       ],
       "genre": "Ska",
       "year": 1999,
-      "cover": null
+      "cover": null,
+      "id": 155
     },
     {
       "name": "Greatest Hits",
@@ -25649,7 +25877,8 @@
       ],
       "genre": "Ska",
       "year": 1999,
-      "cover": null
+      "cover": null,
+      "id": 156
     },
     {
       "name": "Let's Be Friends and Slay the Dragon Together",
@@ -25710,7 +25939,8 @@
       ],
       "genre": "Ska",
       "year": 0,
-      "cover": "media\\d01e00f0-264b-4cd0-a6fd-d1a7efabfad2.jpg"
+      "cover": "media\\d01e00f0-264b-4cd0-a6fd-d1a7efabfad2.jpg",
+      "id": 157
     },
     {
       "name": "Drive North",
@@ -25775,7 +26005,8 @@
       ],
       "genre": "Alternative",
       "year": 2016,
-      "cover": "media\\1d6f8a70-feb5-41b2-a9b9-44d3dadd4e34.jpg"
+      "cover": "media\\1d6f8a70-feb5-41b2-a9b9-44d3dadd4e34.jpg",
+      "id": 158
     },
     {
       "name": "TETOBLOSSOM (Self-Titled)",
@@ -25816,7 +26047,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2024,
-      "cover": null
+      "cover": null,
+      "id": 159
     },
     {
       "name": "End Is Forever",
@@ -25881,7 +26113,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\4e6f0092-6529-44d5-864a-5cd7f6d1b2d4.png"
+      "cover": "media\\4e6f0092-6529-44d5-864a-5cd7f6d1b2d4.png",
+      "id": 160
     },
     {
       "name": "Abbey Road",
@@ -25958,7 +26191,8 @@
       ],
       "genre": null,
       "year": 1969,
-      "cover": "media\\014e08eb-582f-4f4b-881c-bbbe34c91f7f.jpg"
+      "cover": "media\\014e08eb-582f-4f4b-881c-bbbe34c91f7f.jpg",
+      "id": 161
     },
     {
       "name": "Falling Short",
@@ -25987,7 +26221,8 @@
       ],
       "genre": null,
       "year": 2019,
-      "cover": "media\\c634c86e-87ee-4f23-98f1-9b6ff6d79bab.jpg"
+      "cover": "media\\c634c86e-87ee-4f23-98f1-9b6ff6d79bab.jpg",
+      "id": 162
     },
     {
       "name": "Something To Write Home About",
@@ -26052,7 +26287,8 @@
       ],
       "genre": "Alt. Rock",
       "year": 1999,
-      "cover": "media\\c043e12d-72b5-4a59-99b3-0e4dcf9b999c.jpg"
+      "cover": "media\\c043e12d-72b5-4a59-99b3-0e4dcf9b999c.jpg",
+      "id": 163
     },
     {
       "name": "Trash We'd Love",
@@ -26105,7 +26341,8 @@
       ],
       "genre": "J-Rock",
       "year": 2009,
-      "cover": "media\\b2d9d7fb-28ec-464c-b9a2-7f2a5120ef16.png"
+      "cover": "media\\b2d9d7fb-28ec-464c-b9a2-7f2a5120ef16.png",
+      "id": 164
     },
     {
       "name": "Heads Are Gonna Roll",
@@ -26170,7 +26407,8 @@
       ],
       "genre": null,
       "year": 1999,
-      "cover": "media\\df1a374a-de6a-4c6d-bf2c-4da478be8b69.jpg"
+      "cover": "media\\df1a374a-de6a-4c6d-bf2c-4da478be8b69.jpg",
+      "id": 165
     },
     {
       "name": "I Don't Think It's Very Appropriate",
@@ -26203,7 +26441,8 @@
       ],
       "genre": null,
       "year": 0,
-      "cover": "media\\f211d373-5b69-47bb-a82d-920da68b79eb.png"
+      "cover": "media\\f211d373-5b69-47bb-a82d-920da68b79eb.png",
+      "id": 166
     },
     {
       "name": "Money Money 2020",
@@ -26268,7 +26507,8 @@
       ],
       "genre": "New Wave",
       "year": 2004,
-      "cover": "media\\788ecad4-1296-4e32-8b8d-be0ee58d6349.jpg"
+      "cover": "media\\788ecad4-1296-4e32-8b8d-be0ee58d6349.jpg",
+      "id": 167
     },
     {
       "name": "Say It Like You Mean It",
@@ -26329,7 +26569,8 @@
       ],
       "genre": "Pop Punk",
       "year": 2002,
-      "cover": "media\\1acc0c70-e374-4abf-a058-53cf0f1a24c7.jpg"
+      "cover": "media\\1acc0c70-e374-4abf-a058-53cf0f1a24c7.jpg",
+      "id": 168
     },
     {
       "name": "Three Hundred",
@@ -26390,7 +26631,8 @@
       ],
       "genre": null,
       "year": 0,
-      "cover": "media\\23f6a8c5-0b36-45c3-bbd5-44889d08c3dc.jpg"
+      "cover": "media\\23f6a8c5-0b36-45c3-bbd5-44889d08c3dc.jpg",
+      "id": 169
     },
     {
       "name": "Unwritten Law",
@@ -26447,7 +26689,8 @@
       ],
       "genre": "Pop Punk",
       "year": 0,
-      "cover": "media\\2f480cd7-430f-4132-bee4-392effbea57b.jpg"
+      "cover": "media\\2f480cd7-430f-4132-bee4-392effbea57b.jpg",
+      "id": 170
     },
     {
       "name": "BASEketball",
@@ -26508,7 +26751,8 @@
       ],
       "genre": "Ska",
       "year": 1998,
-      "cover": null
+      "cover": null,
+      "id": 171
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26521,7 +26765,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 172
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26534,7 +26779,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 173
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26547,7 +26793,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 174
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26560,7 +26807,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 175
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26573,7 +26821,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 176
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26586,7 +26835,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 177
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26599,7 +26849,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 178
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26612,7 +26863,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 179
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26625,7 +26877,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 180
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26638,7 +26891,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 181
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26651,7 +26905,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 182
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26664,7 +26919,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 183
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26677,7 +26933,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 184
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26690,7 +26947,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 185
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26703,7 +26961,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 186
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26716,7 +26975,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 187
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26729,7 +26989,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 188
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26742,7 +27003,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 189
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26755,7 +27017,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 190
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26768,7 +27031,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 191
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26781,7 +27045,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 192
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26794,7 +27059,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 193
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26807,7 +27073,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 194
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26820,7 +27087,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 195
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26833,7 +27101,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 196
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26846,7 +27115,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 197
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26859,7 +27129,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 198
     },
     {
       "name": "Rock Against Bush, Volume 2",
@@ -26872,7 +27143,8 @@
       ],
       "genre": "Punk",
       "year": 0,
-      "cover": null
+      "cover": null,
+      "id": 199
     },
     {
       "name": "Weezer",
@@ -26921,7 +27193,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 1994,
-      "cover": "media\\09a3373b-1848-48e3-a265-cfb40ca30efa.jpg"
+      "cover": "media\\09a3373b-1848-48e3-a265-cfb40ca30efa.jpg",
+      "id": 200
     },
     {
       "name": "Pinkerton",
@@ -26970,7 +27243,8 @@
       ],
       "genre": null,
       "year": 1996,
-      "cover": "media\\1a2c1990-110a-4f3a-89ba-df657fd62db7.jpg"
+      "cover": "media\\1a2c1990-110a-4f3a-89ba-df657fd62db7.jpg",
+      "id": 201
     },
     {
       "name": "Weezer (Green Album)",
@@ -27019,7 +27293,8 @@
       ],
       "genre": "Alternative Rock",
       "year": 0,
-      "cover": "media\\548171ea-5645-4cad-b3d3-a696e73895b5.jpg"
+      "cover": "media\\548171ea-5645-4cad-b3d3-a696e73895b5.jpg",
+      "id": 202
     },
     {
       "name": "Everything Will Be Alright In the End",
@@ -27080,7 +27355,8 @@
       ],
       "genre": "Rock",
       "year": 2014,
-      "cover": "media\\152c0ecf-39dd-4e53-afdb-1005c4ac96b7.jpg"
+      "cover": "media\\152c0ecf-39dd-4e53-afdb-1005c4ac96b7.jpg",
+      "id": 203
     },
     {
       "name": "Weezer (White Album) [Deluxe Edition]",
@@ -27145,7 +27421,8 @@
       ],
       "genre": null,
       "year": 2016,
-      "cover": "media\\5a16ea6b-db9d-4b6b-b3e5-06c8cf6cc02f.jpg"
+      "cover": "media\\5a16ea6b-db9d-4b6b-b3e5-06c8cf6cc02f.jpg",
+      "id": 204
     },
     {
       "name": "Mammalian Sighing Reflex",
@@ -27202,7 +27479,8 @@
       ],
       "genre": "Pixel",
       "year": 2023,
-      "cover": "media\\3d70d204-da34-4859-b8d2-b9aa77c1ea98.jpg"
+      "cover": "media\\3d70d204-da34-4859-b8d2-b9aa77c1ea98.jpg",
+      "id": 205
     },
     {
       "name": "Ocean Avenue",
@@ -27279,7 +27557,8 @@
       ],
       "genre": "Rock",
       "year": 2004,
-      "cover": null
+      "cover": null,
+      "id": 206
     },
     {
       "name": "Greatest Hits",
@@ -27296,7 +27575,8 @@
       ],
       "genre": "Blues Rock",
       "year": 1999,
-      "cover": null
+      "cover": null,
+      "id": 207
     },
     {
       "name": "UNO . . . DOS . . . TRÉ!",
@@ -27453,7 +27733,8 @@
       ],
       "genre": "Alternative",
       "year": 2012,
-      "cover": "media\\bb05902c-669d-4f08-b653-b3c0f01f3aff.jpg"
+      "cover": "media\\bb05902c-669d-4f08-b653-b3c0f01f3aff.jpg",
+      "id": 208
     }
   ],
   "artists": {
